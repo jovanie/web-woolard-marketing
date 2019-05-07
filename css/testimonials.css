@@ -1,0 +1,22 @@
+#testimonials {
+  margin:0 auto;
+  padding-top:4rem;
+}
+.testimonial {
+  text-align:center;
+}
+.testimonial img {
+  border-radius: 50%;
+  width:10rem;
+  height:auto;
+  display:block;
+  margin: 0 auto;
+}
+.testimonial .quote {
+  margin:0 auto;
+  max-width: 66ch;
+}
+.testimonial .author {
+  margin:0 auto;
+  max-width: 66ch;
+}

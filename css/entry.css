@@ -1,0 +1,84 @@
+section#wm-services {
+	background: #F8F8FF;
+}
+
+section#wm-services h2 {
+	text-align: center;
+}
+
+section#wm-services p {
+	margin:0 auto;
+	text-align: center;
+	max-width:66ch;
+}
+
+section#wm-services hr {
+	display: block;
+	margin: 1.5em auto;
+	width:65em;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+	background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+#services-wrap {
+	display:block;
+	width:100%;
+	position:relative;float:left;
+}
+#wm-services ul#services-list {
+	width:62.5em;
+	list-style: none;
+	margin: 0 auto;
+}
+
+#wm-services #services-list li {
+	font-size: 1em;
+	float: left;
+	width: 25%;
+	padding:0.5em 0;
+  white-space: nowrap;
+}
+
+#wm-services #services-list li .service-icon {
+	padding:0 0.1em;
+	text-align:center;
+	width:100%;
+}#wm-services #services-list li .service-icon i {
+	text-align:center;
+	width:1.5em;
+}
+
+#wm-services #services-list li .service-name {}
+
+#wm-services #services-list li .service-name h4 {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+a#services-cta {
+	display:table;
+	padding:0.55em 2em;
+	background:#202020;
+	color:white;
+	margin:2em auto;
+	top:1em;
+	bottom:1em;
+	position:relative;
+	border-radius:0.5em;
+	font-size:1.25em;
+	font-family: Raleway-Bold;
+}
+
+
+@media only screen and (max-width: 1024px) {
+	#wm-services #services-list li {
+	font-size: 1.15em;
+	float: left;
+	width: 100%;
+	padding:0.375em 02em;
+  white-space: nowrap;
+}
+}

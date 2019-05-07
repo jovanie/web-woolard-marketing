@@ -1,0 +1,29 @@
+footer {
+	position:relative;
+	display:block;
+	width:calc(100% - 4rem);
+	padding:0.5rem 2rem;
+	background-color:#434343;
+	color:white;
+	height:1.5rem;
+}
+footer ul:nth-of-type(1){
+	float:left;
+}
+footer ul:nth-of-type(2){
+	float:right;
+}
+footer ul {
+	list-style-type: none;
+}
+footer ul li {
+	display:inline;
+	padding-left:0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+	footer ul, footer ul li {
+		display:block;
+		width:100%;
+	}
+}
