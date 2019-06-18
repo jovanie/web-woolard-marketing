@@ -1,0 +1,82 @@
+<!-- Notes & Comments
+Version 1.0
+May 9th, 2019
+Initial Homepage Design and Layout Setup
+Jovanie De La Cruz & Woolard Marketing
+
+Fonts need to be adjusted to consider mobile layout. They're just
+too varying in size compared to the rest of the page elements.
+
+TODO: Fonts need to be adjusted to consider mobile layout. They're just too varying in size compared to the rest of the page elements.
+
+TODO: Values content is still not resizing its text box. It can look ugly on window resize.
+
+It's not clear what each section is. Maybe they should have headers
+that say "Our Values" and "Services"
+
+People don't want to read. Less words, more graphics and images.
+Phones are tall. Use Vertical Space more.
+
+Need to reverse apperance order of header. Should start hidden then
+addClass when scroll met
+
+Inspiration:
+https://www.mojomedialabs.com/
+https://jbchicago.com/
+https://jstonermarketing.com/
+
+---- Document Begins -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Page Information -->
+  <meta charset="UTF-8">
+  <title>Woolard Marketing</title>
+  <base href="index.html">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <!-- CDN -->
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+  <script src="js/parallax.min.js"></script>
+  <!-- Custom & Hosted -->
+  <link rel="stylesheet" href="css/wm-fonts.css">
+  <link rel="stylesheet" href="css/wm_styles.min.css">
+</head>
+
+<body>
+  <div class="container max-width">
+    <div class="full-width full-width--header">
+      <header class="header max-width header--white header--desktop">
+        <a href="#" class="header__logo">
+          <img class="header__logo__image header__logo__image--black header__logo__image--desktop" src="img/wm-logo.png" />
+        </a>
+        <nav class="menu header__nav header__nav--desktop">
+          <i class="header__nav__button header__nav__button--desktop fas fa-bars"></i>
+          <ul class="header__nav__menu header__nav__menu--desktop no-select">
+            <a href="#" class="header__nav__menu__entry header__nav__menu__entry--desktop">
+              <li>HOME</li>
+            </a>
+            <a href="#" class="header__nav__menu__entry header__nav__menu__entry--desktop">
+              <li>WHO WE ARE</li>
+            </a>
+            <a href="#" class="header__nav__menu__entry header__nav__menu__entry--desktop">
+              <li>WHAT WE DO</li>
+            </a>
+            <a href="#" class="header__nav__menu__entry header__nav__menu__entry--desktop">
+              <li>OUR WORK</li>
+            </a>
+            <a href="#" class="header__nav__menu__entry header__nav__menu__entry--desktop">
+              <li>LET'S CHAT</li>
+            </a>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+	<script src="js/wm-animations.js"></script>
+</body>

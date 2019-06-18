@@ -3,7 +3,7 @@
 		$html = $('html');
 
 	function resize() {
-		if ($window.width() < 753) {
+		if (window.innerWidth < 768) {
 			$(".header__nav").removeClass('header__nav--desktop');
 			$(".header__nav").addClass('header__nav--mobile');
 			$(".header__nav__button").removeClass('header__nav__button--desktop');
@@ -31,16 +31,16 @@
 
 //Jquery Slide Animation for Mobile Nav Menu
 $(".header__nav__button").click(function() {
-	$(".header__nav__menu").stop().slideToggle(250);
+	$(".header__nav__menu__entry").stop().slideToggle(250);
 });
 //Jquery Mobile Nav Toggle
 $(document).ready(function() {
 	function checkWidth() {
 		var windowWidth = $(window).width();
-		if (windowWidth <= 753) {
-			$(".header__nav__menu").hide();
+		if (window.innerWidth <= 768) {
+			//$(".header__nav__menu").hide();
 		}
-		if (windowWidth > 753) {
+		if (window.innerWidth > 768) {
 			$(".header__nav__menu").show();
 		}
 	}
