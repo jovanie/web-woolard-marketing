@@ -34,6 +34,7 @@ body {}
     &__logo {
       height: 100%;
       flex: 0;
+      user-select: none;
 
       &__image {
         width: auto;
@@ -57,18 +58,24 @@ body {}
         right: 0;
         top: 50%;
         transform: translate(0, -50%);
+        user-select: none;
 
         &__entry {
           font-family: Oswald-Light;
           font-size: 1em;
           letter-spacing: 1px;
           color: black;
+          margin-right: 1.5em;
           list-style: none;
           position: relative;
           display: inline-block;
           padding: 0.5rem 0 0.5rem 1.25rem;
           text-decoration: none;
           text-align: right;
+
+          &:hover {
+            color: black;
+          }
         }
       }
     }
@@ -101,6 +108,8 @@ body {}
           right: 0;
           transform: translate(0, -50%);
           padding: 0.75em;
+          z-index: 900;
+          cursor: pointer;
         }
 
         &__menu {
@@ -118,6 +127,8 @@ body {}
 
           &__entry {
             display: block;
+            width: 100%;
+            position: relative;
             text-align: center;
             color: #A7A9AB;
             padding: 1em 0;
@@ -125,9 +136,8 @@ body {}
             border-bottom: 1.5px solid #F0F0F0;
             text-decoration: none;
             list-style: none;
-            display: block;
-            &:last-of-type {
 
+            &:last-of-type {
               border-bottom: none;
               box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             }
