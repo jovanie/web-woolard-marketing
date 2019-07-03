@@ -202,7 +202,7 @@ h3 {
 	/* 1.375x body copy size = 22px */
 	line-height: 1.13636364;
 	/* 25px / 22px */
-	padding: 1.25rem 2rem 0.25rem 2rem;
+	padding: 1.25rem 2rem 0.25rem 1rem;
 }
 
 @media (min-width: 43.75em) {
