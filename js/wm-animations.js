@@ -1,5 +1,6 @@
-//Jquery Mobile Nav Toggle
-$(document).ready(function () {
+$(document).ready(function () {});
+
+$(window).on('load', function () {
   //Jquery Slide Animation for Mobile Nav Menu
   $('.header__nav__button').click(function () {
     $('.header__nav__menu__entry').stop().slideToggle(250);
@@ -20,4 +21,5 @@ $(document).ready(function () {
 
   checkWidth();
   $(window).resize(checkWidth);
+
 });
