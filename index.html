@@ -1,383 +1,59 @@
-<!-- Notes & Comments
-Version 1.0
-May 9th, 2019
-Initial Homepage Design and Layout Setup
-Jovanie De La Cruz & Woolard Marketing
-
-Fonts need to be adjusted to consider mobile layout. They're just
-too varying in size compared to the rest of the page elements.
-
-TODO: Fonts need to be adjusted to consider mobile layout. They're just too varying in size compared to the rest of the page elements.
-
-TODO: Values content is still not resizing its text box. It can look ugly on window resize.
-
-It's not clear what each section is. Maybe they should have headers
-that say "Our Values" and "Services"
-
-People don't want to read. Less words, more graphics and images.
-Phones are tall. Use Vertical Space more.
-
-Need to reverse apperance order of header. Should start hidden then
-addClass when scroll met
-
-Inspiration:
-https://www.mojomedialabs.com/
-https://jbchicago.com/
-https://jstonermarketing.com/
-
----- Document Begins -->
 <!DOCTYPE HTML>
 <html>
 
 <head>
-	<!-- Page Information -->
-	<meta charset="UTF-8">
-	<title>Woolard Marketing</title>
-	<base href="index.html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- CDN -->
-	<link rel="stylesheet" href="css/normalize.min.css">
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
-	<link rel="stylesheet" href="fontawesome/css/all.css">
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
-	<script src="js/parallax.min.js"></script>
-	<!-- Custom & Hosted -->
-	<link rel="stylesheet" href="css/wm-fonts.css">
-	<link rel="stylesheet" href="css/wm_styles.min.css">
+  <!-- Page Information -->
+  <meta charset="UTF-8">
+  <title>Woolard Marketing</title>
+  <base href="index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CDN -->
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+  <script src="js/parallax.min.js"></script>
+  <!-- Custom & Hosted -->
+  <link rel="stylesheet" href="css/wm-fonts.css">
+  <link rel="stylesheet" href="css/wm_styles.min.css">
 </head>
 
 <body>
-	<div class="wrapper--header">
-		<script>
-			$('.wrapper--header').load('header.html .header');
-		</script>
-	</div>
+  <div class="container--main">
+    <div class="wrapper--header">
+      <script>
+        $('.wrapper--header').load('header.html .header');
+      </script>
 
-	<div class="container max-width">
-		<div class="content content--main">
-			<section class="content__landing full-width" data-parallax="scroll" data-image-src="img/hoemann1e_copy.jpg" data-position="center -475px">
-			</section>
-			<section class="launch">
-				<div class="display-width">
-					<div class="max-width">
-						<p>
-							<h2>
-								Launch Your Business Further
-							</h2>
-							<h5>
-								We are focused on developing and executing strategies that are authentic and enduring. Whether you’re just starting your business, adapting to a new market, or need to switch up your strategy, we want to work with you.
-							</h5>
-						</p>
-					</div>
-				</div>
-			</section>
-		</div>
+    </div>
+    
 
+  </div>
+  <div class="wrapper--contact ">
+    <section class="contact max-width">
+      <h3 class="contact__title">Ready? Let's Chat.</h3>
+      <form class="contact__form" role="form" method="post" action="contact-form.php">
+        <div class="contact__form__section contact__form__section--left">
+          <fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Name" id="name" name="name" type="text" tabindex="1" required></fieldset>
+          <fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Email Address" id="email" name="email" type="email" tabindex="2" required></fieldset>
+          <fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Phone Number" id="phone" name="phone" type="tel" tabindex="3" required></fieldset>
+        </div>
+        <div class="contact__form__section contact__form__section--right">
+          <fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Company" id="company" name="company" type="text" tabindex="3" required></fieldset>
+          <fieldset class="contact__form__section__field contact__form__section__field--text"><textarea class="contact__form__section__field__text" placeholder="Tell us about your project" id="message" name="message" tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset class="contact__form__section__field"><button class="contact__form__section__field__button" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button></fieldset>
+          <div id="form-messages" class="h3 success" style="text-align:center;"></div>
+        </div>
+      </form>
+    </section>
+  </div>
+  <div class="wrapper--footer">
+    <script>
+      $('.wrapper--footer').load('footer.html .footer');
+    </script>
+  </div>
 
-		<!--<script>
-	var distance = $('header').offset().top+125,
-			$window = $(window);
-
-	$window.scroll(function() {
-			if ( $window.scrollTop() <= distance ) {
-					$("header").removeClass("top");
-			}else if ( $window.scrollTop() > distance ) {
-					$("header").addClass("top");
-			}
-	});
-	</script>-->
-		<section class="wm-values ">
-			<link rel="stylesheet" href="css/values.css">
-			<script>
-			</script>
-			<a class="" id="first">
-				<span class="one-third value">
-					<div class="background"></div>
-					<div class="gradient"></div>
-					<div class="text">
-						<h2>Authentic</h2>
-						<h6>Lorem Ipsum</h6>
-					</div>
-				</span>
-			</a>
-			<a class="" id="second">
-				<span class="one-third value">
-					<div class="background"></div>
-					<div class="gradient"></div>
-					<div class="text">
-						<h2>Collaborative</h2>
-						<h6>Lorem Ipsum</h6>
-					</div>
-				</span>
-			</a>
-			<a class="" id="third">
-				<span class="one-third value">
-					<div class="background"></div>
-					<div class="gradient"></div>
-					<div class="text">
-						<h2>Dynamic</h2>
-						<h6>Lorem Ipsum</h6>
-					</div>
-				</span>
-			</a>
-		</section>
-		<div class="values-content">
-			<div class="" id="first">
-				<div class="display-width">
-					<div class=" max-width">
-						<div class="values-text">
-							<h2>Authentic</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id accumsan leo. Sed vestibulum tellus sed arcu porttitor feugiat. Sed in aliquam nisl, nec gravida risus. Etiam lobortis faucibus metus, sit amet vehicula risus
-								iaculis
-								eget.</p>
-							<a class="rounded">Learn More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="" id="second">
-				<div class="values-text">
-					<div class="display-width">
-						<div class=" max-width">
-							<h2>Collaborative</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id accumsan leo. Sed vestibulum tellus sed arcu porttitor feugiat. Sed in aliquam nisl, nec gravida risus. Etiam lobortis faucibus metus, sit amet vehicula risus
-								iaculis
-								eget. </p>
-							<a class="rounded">Learn More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="" id="third">
-				<div class="display-width">
-					<div class=" max-width">
-						<div class="values-text">
-							<h2>Dynamic</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id accumsan leo. Sed vestibulum tellus sed arcu porttitor feugiat. Sed in aliquam nisl, nec gravida risus. </p>
-							<a class="rounded">Learn More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="services">
-			<h2 class="services-title">What We Do</h2>
-			<p>Nunc et nibh pharetra purus ultricies sodales. Vestibulum et erat vulputate, lacinia lectus eget, efficitur nunc.
-			</p>
-			<div class="services__list">
-				<li class="services__list__entry">
-					<span class="services__list____entry__service-icon">
-						<i class="far fa-edit"></i>
-						<h4 class="services__list____entry__service-name">Branding</h4>
-					</span>
-				</li>
-				<li class="services__list__entry">
-					<span class="services__list____entry__service-icon">
-						<i class="fa fa-clipboard-list"></i>
-						<h4 class="services__list____entry__service-name">Strategic Marketing</h4>
-					</span>
-				</li>
-				<li class="services__list__entry">
-					<span class="services__list____entry__service-icon">
-						<i class="fa fa-newspaper"></i>
-						<h4 class="services__list____entry__service-name">Multichannel Advertising</h4>
-					</span>
-				</li>
-				<li class="services__list__entry">
-					<span class="services__list____entry__service-icon">
-						<i class="far fa-thumbs-up"></i>
-						<h4 class="services__list____entry__service-name">Digital Marketing</h4>
-					</span>
-				</li>
-				<li class="services__list__entry">
-					<span class="services__list____entry__service-icon">
-						<i class="fa fa-code"></i>
-						<h4 class="services__list____entry__service-name">Website Development</h4>
-					</span>
-				</li>
-				<li class="services__list__entry">
-					<span class="services__list____entry__service-icon">
-						<i class="far fa-comments"></i>
-						<h4 class="services__list____entry__service-name">Public Relations</h4>
-					</span>
-				</li>
-				<li class="services__list__entry">
-					<span class="services__list____entry__service-icon">
-						<i class="fa fa-grin-beam"></i>
-						<h4 class="services__list____entry__service-name">Friendly Faces</h4>
-					</span>
-				</li>
-				<li class="services__list__entry">
-					<span class="services__list____entry__service-icon">
-						<i class="fas fa-plus"></i>
-						<h4 class="services__list____entry__service-name">Additional Services</h4>
-					</span>
-				</li>
-			</div>
-		</section>
-		<section id="wm-services">
-			<h2>
-				HOW WE CAN HELP
-			</h2>
-			<p>
-				Nunc et nibh pharetra purus ultricies sodales. Vestibulum et erat vulputate, lacinia lectus eget, efficitur nunc.
-			</p>
-			<hr>
-			<div id="services-wrap">
-				<div class="display-width">
-					<div class=" max-width">
-						<ul id="services-list">
-							<li>
-								<span class="service-icon">
-									<i class="far fa-edit"></i>
-								</span>
-								<span class="service-name">
-									<h4>
-										Branding
-									</h4>
-								</span>
-							</li>
-							<li>
-								<span class="service-icon">
-									<i class="fa fa-clipboard-list" aria-hidden="true"></i>
-								</span>
-								<span class="service-name">
-									<h4>
-										Strategic Marketing
-									</h4>
-								</span>
-							</li>
-							<li>
-								<span class="service-icon">
-									<i class="fa fa-newspaper" aria-hidden="true"></i>
-								</span>
-								<span class="service-name">
-									<h4>
-										Multichannel Advertising
-									</h4>
-								</span>
-							</li>
-							<li>
-								<span class="service-icon">
-									<i class="far fa-thumbs-up"></i>
-								</span>
-								<span class="service-name">
-									<h4>
-										Digital Marketing
-									</h4>
-								</span>
-							</li>
-							<li>
-								<span class="service-icon">
-									<i class="fa fa-code" aria-hidden="true"></i>
-								</span>
-								<span class="service-name">
-									<h4>
-										Website Development
-									</h4>
-								</span>
-							</li>
-							<li>
-								<span class="service-icon">
-									<i class="fa fa-comments" aria-hidden="true"></i>
-								</span>
-								<span class="service-name">
-									<h4>
-										Public Relations
-									</h4>
-								</span>
-							</li>
-							<li>
-								<span class="service-icon">
-									<i class="fa fa-grin-beam" aria-hidden="true"></i>
-								</span>
-								<span class="service-name">
-									<h4>
-										Friendly Faces
-									</h4>
-								</span>
-							</li>
-							<li>
-								<span class="service-icon">
-									<i class="fas fa-plus"></i>
-								</span>
-								<span class="service-name">
-									<h4>
-										Additional Services
-									</h4>
-								</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="new">
-				<a class="" id="services-cta">
-					Button
-				</a>
-			</div>
-		</section>
-		<section id="testimonials" class="">
-			<div id="dummy" class="testimonial active">
-				<div class="display-width">
-					<div class=" max-width">
-						<img src="img/man-wearing-hat.jpg">
-						<h2 class="quote">
-							"Quotation from a satisfied customer regarding the quality work Woolard Marketing has done"
-						</h2>
-						<h5 class="author">
-							John Doe, A Satisfied Customer
-						</h5>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="contact">
-			<div class="display-width">
-				<h3 class="contact__title">Ready? Let's Chat.</h3>
-				<form class="contact__form" role="form" method="post" action="contact-form.php">
-
-					<div class="contact__form__section contact__form__section--left">
-						<fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Name" id="name" name="name" type="text" tabindex="1" required></fieldset>
-						<fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Email Address" id="email" name="email" type="email" tabindex="2" required></fieldset>
-						<fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Phone Number" id="phone" name="phone" type="tel" tabindex="3" required></fieldset>
-					</div>
-					<div class="contact__form__section contact__form__section--right">
-						<fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Company" id="company" name="company" type="text" tabindex="3" required></fieldset>
-						<fieldset class="contact__form__section__field contact__form__section__field--text"><textarea class="contact__form__section__field__text" placeholder="Tell us about your project" id="message" name="message" tabindex="5"
-								required></textarea>
-						</fieldset>
-						<fieldset class="contact__form__section__field"><button class="contact__form__section__field__button" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button></fieldset>
-						<div id="form-messages" class="h3 success" style="text-align:center;"></div>
-					</div>
-				</form>
-			</div>
-		</section>
-
-		<footer class="footer">
-			<div class="footer__entry footer__entry--left">
-				Woolard Marketing
-			</div>
-			<div class="footer__entry footer__entry--left">
-				17 E Taylor St, Champaign, IL 61820
-			</div>
-			<ul class="footer__entry footer__entry--right footer__entry--extra-head">
-				<li>Home</li>
-				<li>Who We Are</li>
-				<li>What We Do</li>
-				<li>Our Work</li>
-				<li>Contact</li>
-			</ul>
-		</footer>
-
-	</div>
-	<!-- Scripts -->
   <script src="js/wm-animations.js"></script>
-	<script src='js/values-nav.js'></script>
-	<script src='js/scrollTo.js'></script>
-	<script src='js/values.js'></script>
 </body>
-
-</html>
