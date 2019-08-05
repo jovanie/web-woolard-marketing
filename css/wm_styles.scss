@@ -120,34 +120,74 @@ body {
 .wrapper--testimonials {
   .testimonials {
     margin: 0 auto;
-    padding: 0.5em 1em;
+    padding: 1em;
     box-sizing: border-box;
     max-width: $max-width;
 
     &__entry {
       display: flex;
       box-sizing: border-box;
-      border-left: 1em solid $woolard-red;
 
       &.active {}
 
       &__photo {
-        flex:1;
-        height:100%;
+        flex: 1;
+        height: 100%;
 
-        img {min-height: 100%;
+        img {
+          border-left: 6px solid $woolard-red;
+          height: 100%;
+          height:11em;
+          display: block;
         }
       }
 
       &__description {
         flex: 4;
 
-        &__quote {}
+        .quote-icon {
+          position: relative;
+          display: inline;
+          background: red;
+          width: 5%;
+          height: auto;
+          margin: 0;
+
+          i {}
+        }
+
+        &__quote {
+          box-sizing: border-box;
+          position: relative;
+          padding: 1.75em 2.5em 1em;
+          line-height: 2em;
+
+          &:before {
+            font-family: "FontAwesome";
+            content: "\f10d";
+            font-size: 1.5em;
+            font-style: normal;
+            color: black;
+            position: absolute;
+            top: 0.5em;
+            left: 0.5em;
+          }
+
+          p {
+            display: inline-block;
+          }
+        }
 
         &__author {
-          &__name {}
+          padding: 0 2.75em;
 
-          &__company-position {}
+          &__name {
+            font-family: LiberationSans-Bold;
+          }
+
+          &__company-position {
+            font-family: LiberationSans-Italic;
+          }
         }
       }
     }
@@ -401,6 +441,48 @@ body {
           &:last-of-type {
             border-bottom: none;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper--testimonials {
+    .testimonials {
+      &__entry {
+        display: block;
+
+        &.active {}
+
+        &__photo {
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+
+          img {
+            width: 10em;
+            height: auto;
+            margin: 0 auto;
+          }
+        }
+
+        &__description {
+          display: block;
+
+          &__quote {
+            padding: 0 0 0 2.5em;
+
+            &:before {
+              top: 0.75em;
+            }
+
+            p {}
+          }
+
+          &__author {
+            &__name {}
+
+            &__company-position {}
           }
         }
       }
