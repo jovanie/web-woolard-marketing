@@ -120,22 +120,20 @@ body {
 .clearer {
   clear: both;
 }
+
 .landing {
   position: relative;
   display: block;
   height: 0;
   padding-top: 60vh;
-  background:transparent;
+  background: transparent;
   background-size: cover;
   background-attachment: bottom;
   background-position: bottom;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(0, 0, 0, 0.02) 57%,
-      rgba(0, 0, 0, 0) 62%);
-  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, .8);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.02) 57%, rgba(0, 0, 0, 0) 62%);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .8);
 }
+
 .launch {
   height: 12.5rem;
   background-image: url("../img/blueskywithsun.jpg");
@@ -286,12 +284,12 @@ body {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0 90%);
         transition: all 0.3s ease-in;
         margin-bottom: initial;
+        margin-bottom: 0;
       }
     }
   }
 
   &__content {
-
     &__entry {
       margin: 0;
       padding: 0;
@@ -312,34 +310,30 @@ body {
         .rounded {
           position: relative;
           display: block;
-          font-family: Raleway-Medium;
-          font-size: 1.25rem;
-          line-height: 1.5rem;
-          text-align: center;
-          width: 8rem;
-          height: 1.5rem;
-          padding: 0.5rem 1rem;
-          color: white;
           margin: 0.5rem 0 0 2rem;
-        background: red;}
+          font-family: Oswald-Bold;
+          font-size: 1.25rem;
+          text-align: center;
+          width: 6rem;
+          color: white;
+          padding: 0.55em 2em;
+          background: #202020;
+        }
 
         a {
-          position: relative;
-          display: block;
-          font-family: Raleway-Medium;
-          font-size: 1.25rem;
-          line-height: 1.5rem;
-          text-align: center;
-          width: 8rem;
-          height: 1.5rem;
-          padding: 0.5rem 1rem;
+          display: table;
+          padding: 0.55em 2em;
+          background: #202020;
           color: white;
-          margin: 0.5rem 0 0 2rem;
+          margin: 0 auto;
+          position: relative;
+          font-size: 1.25em;
+          font-family: Oswald-Bold;
+          cursor: pointer;
         }
       }
 
       &.active {
-
         .text {
           height: auto;
           display: block;
@@ -387,17 +381,18 @@ body {
     width: 100%;
     text-align: center;
 
-    .services-list {display: inline-block;
+    .services-list {
+      display: inline-block;
       list-style: none;
       padding: 0;
       float: none;
       margin: 0 auto;
-      width:calc(100% - 25px);
-      padding-left:100px;
+      width: calc(100% - 25px);
+      padding-left: 100px;
       text-align: left;
 
       li {
-      margin: 0 auto;
+        margin: 0 auto;
         font-size: 1em;
         float: left;
         padding: 0.5em 1em 0.5em 0;
@@ -999,6 +994,7 @@ body {
   section.launch div h5 {}
 }
 /* Contact // Contact // Contact // Contact // Contact // Contact // Contact //  */
+
 .absolutely-centered {
   position: relative;
   display: inline;
