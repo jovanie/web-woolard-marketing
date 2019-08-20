@@ -117,6 +117,245 @@ body {
   }
 }
 
+.clearer {
+  clear: both;
+}
+.landing {
+  position: relative;
+  display: block;
+  height: 0;
+  padding-top: 60vh;
+  background:transparent;
+  background-size: cover;
+  background-attachment: bottom;
+  background-position: bottom;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.02) 57%,
+      rgba(0, 0, 0, 0) 62%);
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, .8);
+}
+.launch {
+  height: 12.5rem;
+  background-image: url("../img/blueskywithsun.jpg");
+  background-size: cover;
+  position: relative;
+
+  .display-width {
+    .max-width {
+      .launch__body {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 1rem;
+
+        h2,
+        h5 {
+          color: white;
+          text-align: left;
+          max-width: 66ch;
+          text-shadow: 2px 2px 6px #000000;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+.values {
+  &__thumbnails {
+    position: relative;
+    display: inline;
+    overflow: auto;
+
+    &__entry {
+      position: relative;
+      display: inline;
+      overflow: auto;
+
+      .value {
+        display: block;
+        height: 0;
+        padding-top: 20%;
+        overflow: hidden;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 60% 90%, 50% 90%, 40% 90%, 0 90%);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 60% 90%, 50% 90%, 40% 90%, 0 90%);
+        transition: all 0.3s ease-in;
+        position: relative;
+        margin-bottom: -2%;
+
+        .text {
+          position: absolute;
+          bottom: 0;
+          padding-bottom: 5%;
+          color: white;
+          text-shadow: 2px 2px 8px #000000;
+          text-align: left;
+
+          h6 {
+            height: 3rem;
+            padding-bottom: 0;
+            margin-top: -0.5em;
+            padding-top: 0;
+          }
+        }
+
+        .gradient {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+        }
+
+        .background {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          background-size: cover;
+          background-origin: border-box;
+          background-repeat: no-repeat;
+          -webkit-filter: grayscale(70%);
+          filter: grayscale(70%) contrast(90%) brightness(90%);
+          -webkit-transition: -webkit-filter 500ms ease-in;
+          transition: -webkit-filter 300ms ease-in;
+        }
+      }
+
+      &#first {
+        .value {
+          .gradient {
+            background: -moz-linear-gradient(top, rgba(149, 107, 44, 0.1) 1%, rgba(149, 107, 44, 0.1) 33%, rgba(149, 107, 44, 0.2) 66%, rgba(149, 107, 44, 0.3) 100%);
+            background: -webkit-linear-gradient(top, rgba(149, 107, 44, 0.1) 1%, rgba(149, 107, 44, 0.1) 33%, rgba(149, 107, 44, 0.2) 66%, rgba(149, 107, 44, 0.3) 100%);
+            background: linear-gradient(to bottom, rgba(149, 107, 44, 0.1) 1%, rgba(149, 107, 44, 0.1) 33%, rgba(149, 107, 44, 0.2) 66%, rgba(149, 107, 44, 0.3) 100%);
+          }
+
+          .background {
+            background-image: url("../img/people_opt.jpg");
+          }
+        }
+      }
+
+      &#second {
+        .value {
+          .gradient {
+            background: -moz-linear-gradient(top, rgba(121, 44, 149, 0.1) 1%, rgba(121, 44, 149, 0.1) 33%, rgba(121, 44, 149, 0.2) 66%, rgba(121, 44, 149, 0.3) 100%);
+            background: -webkit-linear-gradient(top, rgba(121, 44, 149, 0.1) 1%, rgba(121, 44, 149, 0.1) 33%, rgba(121, 44, 149, 0.2) 66%, rgba(121, 44, 149, 0.3) 100%);
+            background: linear-gradient(to bottom, rgba(121, 44, 149, 0.1) 1%, rgba(121, 44, 149, 0.1) 33%, rgba(121, 44, 149, 0.2) 66%, rgba(121, 44, 149, 0.3) 100%);
+          }
+
+          .background {
+            background-image: url("../img/startup-collaboration_opt.jpg");
+          }
+        }
+      }
+
+      &#third {
+        .value {
+          .gradient {
+            background: -moz-linear-gradient(top, rgba(37, 115, 216, 0.1) 1%, rgba(37, 115, 216, 0.1) 33%, rgba(37, 115, 216, 0.2) 66%, rgba(37, 115, 216, 0.3) 100%);
+            background: -webkit-linear-gradient(top, rgba(37, 115, 216, 0.1) 1%, rgba(37, 115, 216, 0.1) 33%, rgba(37, 115, 216, 0.2) 66%, rgba(37, 115, 216, 0.3) 100%);
+            background: linear-gradient(to bottom, rgba(37, 115, 216, 0.1) 1%, rgba(37, 115, 216, 0.1) 33%, rgba(37, 115, 216, 0.2) 66%, rgba(37, 115, 216, 0.3) 100%);
+          }
+
+          .background {
+            background-image: url("../img/chess-strategy_opt.jpg");
+          }
+        }
+      }
+
+      &.active,
+      &:hover {
+        .value {
+          .background {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0 90%);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0 90%);
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+            -webkit-transition: -webkit-filter 300ms ease-out;
+            transition: -webkit-filter 300ms ease-out;
+          }
+        }
+      }
+    }
+
+    &__entry.active {
+      .value {
+        overflow: visible;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0 90%);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0 90%);
+        transition: all 0.3s ease-in;
+        margin-bottom: initial;
+      }
+    }
+  }
+
+  &__content {
+
+    &__entry {
+      margin: 0;
+      padding: 0;
+      display: block;
+      height: auto;
+
+      .text {
+        display: none;
+        padding-bottom: 1em;
+
+        h2 {
+          margin-top: 0;
+          padding-top: 0;
+        }
+
+        p {}
+
+        .rounded {
+          position: relative;
+          display: block;
+          font-family: Raleway-Medium;
+          font-size: 1.25rem;
+          line-height: 1.5rem;
+          text-align: center;
+          width: 8rem;
+          height: 1.5rem;
+          padding: 0.5rem 1rem;
+          color: white;
+          margin: 0.5rem 0 0 2rem;
+        background: red;}
+
+        a {
+          position: relative;
+          display: block;
+          font-family: Raleway-Medium;
+          font-size: 1.25rem;
+          line-height: 1.5rem;
+          text-align: center;
+          width: 8rem;
+          height: 1.5rem;
+          padding: 0.5rem 1rem;
+          color: white;
+          margin: 0.5rem 0 0 2rem;
+        }
+      }
+
+      &.active {
+
+        .text {
+          height: auto;
+          display: block;
+        }
+      }
+    }
+
+    &__entry.active {
+      &__text {
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+
 .wrapper--services {
   display: block;
   background: #F8F8FF;
@@ -146,21 +385,24 @@ body {
   .services {
     display: block;
     width: 100%;
-    position: relative;
+    text-align: center;
 
-    .services-list {
-      display: block;
+    .services-list {display: inline-block;
       list-style: none;
+      padding: 0;
+      float: none;
       margin: 0 auto;
-      height: 100%;
-      padding: 0 1em;
+      width:calc(100% - 25px);
+      padding-left:100px;
+      text-align: left;
 
       li {
+      margin: 0 auto;
         font-size: 1em;
         float: left;
-        width: 25%;
-        padding: 0.5em 0;
+        padding: 0.5em 1em 0.5em 0;
         white-space: nowrap;
+        width: auto;
 
         .service-icon i {
           padding: 0 0.1em;
@@ -467,13 +709,22 @@ body {
 
     .services {
       .services-list {
-        margin: 0 25%;
+        margin: 0 auto;
 
         li {
-          float:left;
-          width: 25%;
-          display:inline-block;
+          width: auto;
+          padding-left: 0;
+          padding-right: 0;
+          display: inline-block;
+        }
 
+        li:nth-child(even) {
+          .service-icon i {}
+
+          .service-name h4 {}
+        }
+
+        li:nth-child(odd) {
           .service-icon i {}
 
           .service-name h4 {}
@@ -567,7 +818,6 @@ body {
         li {
           font-size: 1.15em;
           float: left;
-          width: 100%;
           padding: 0.375em 2em;
           white-space: nowrap;
 
@@ -728,26 +978,6 @@ body {
     }
   }
 }
-
-section.launch {
-  height: 12.5rem;
-  background-image: url("../img/blueskywithsun.jpg");
-  background-size: cover;
-}
-
-section.launch div {
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 1rem;
-}
-
-section.launch div h2,
-section.launch div h5 {
-  color: white;
-  text-align: left;
-  max-width: 66ch;
-  text-shadow: 2px 2px 6px #000000;
-}
 @media only screen and (max-width: 768px) {
   section.launch {
     height: 15em;
@@ -769,7 +999,6 @@ section.launch div h5 {
   section.launch div h5 {}
 }
 /* Contact // Contact // Contact // Contact // Contact // Contact // Contact //  */
-
 .absolutely-centered {
   position: relative;
   display: inline;

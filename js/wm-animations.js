@@ -1,8 +1,10 @@
-$(document).ready(function () {});
+$(document).ready(function() {
 
-$(window).on('load', function () {
+});
+
+$(window).on('load', function() {
   //Jquery Slide Animation for Mobile Nav Menu
-  $('.header__nav__button').click(function () {
+  $('.header__nav__button').click(function() {
     $('.header__nav__menu__entry').stop().slideToggle(250);
   });
 
@@ -21,5 +23,20 @@ $(window).on('load', function () {
 
   checkWidth();
   $(window).resize(checkWidth);
+
+  function checkServicesWidth() {
+    var maxServiceWidth = 0;
+    $('.wrapper--services .services .services-list li').each(function () {
+      if ($(this).width() >= maxServiceWidth) {
+        maxServiceWidth = $(this).width();
+      }
+    });
+
+    $('.wrapper--services .services .services-list li').width(maxServiceWidth);
+    return 0;
+  };
+
+  checkServicesWidth();
+  $(window).resize(checkServicesWidth);
 
 });
