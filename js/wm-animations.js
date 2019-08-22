@@ -36,7 +36,7 @@ $(window).on('load', function() {
     return 0;
   };
 
-  checkServicesWidth();
-  $(window).resize(checkServicesWidth);
+  //checkServicesWidth();
+  //$(window).resize(checkServicesWidth);
 
 });

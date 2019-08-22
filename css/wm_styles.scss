@@ -382,22 +382,18 @@ body {
     text-align: center;
 
     .services-list {
-      display: inline-block;
+      display: flex;
+      flex-wrap: wrap;
       list-style: none;
-      padding: 0;
-      float: none;
       margin: 0 auto;
-      width: calc(100% - 25px);
-      padding-left: 100px;
-      text-align: left;
+      padding-left: 5%;
 
       li {
-        margin: 0 auto;
+        text-align: left;
         font-size: 1em;
-        float: left;
-        padding: 0.5em 1em 0.5em 0;
-        white-space: nowrap;
-        width: auto;
+        flex: 1 0 25%;
+        box-sizing: border-box;
+        padding: 0.75em 0.5em;
 
         .service-icon i {
           padding: 0 0.1em;
@@ -694,7 +690,7 @@ body {
 ::-webkit-input-placeholder {
   color: #888;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1100px) {
   .wrapper--services {
     h2 {}
 
@@ -703,26 +699,32 @@ body {
     hr {}
 
     .services {
+      text-align: center;
+
       .services-list {
         margin: 0 auto;
+        width: 600px;
+        padding-left: 7.5%;
+        box-sizing: border-box;
 
         li {
-          width: auto;
-          padding-left: 0;
-          padding-right: 0;
-          display: inline-block;
-        }
+          text-align: left;
+          font-size: 1em;
+          flex: 1 0 50%;
+          box-sizing: border-box;
+          padding: 0.25em 0.15em;
+          white-space: nowrap;
 
-        li:nth-child(even) {
-          .service-icon i {}
+          .service-icon i {
+            padding: 0 0.1em;
+            text-align: center;
+          }
 
-          .service-name h4 {}
-        }
-
-        li:nth-child(odd) {
-          .service-icon i {}
-
-          .service-name h4 {}
+          .service-name h4 {
+            display: inline;
+            margin: 0;
+            padding: 0;
+          }
         }
       }
     }
@@ -802,23 +804,49 @@ body {
   }
 
   .wrapper--services {
-    h2 {}
+    h2 {
+      text-align: left;
+    }
 
-    p {}
+    p {
+      text-align: left;
+    }
 
-    hr {}
+    hr {
+      display: block;
+      margin: 1.5em auto;
+      width: 95%;
+      border: 0;
+      height: 1px;
+    }
 
     .services {
+      text-align: center;
+
       .services-list {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0.25rem 2rem;
+        box-sizing: border-box;
+
         li {
-          font-size: 1.15em;
-          float: left;
-          padding: 0.375em 2em;
+          text-align: left;
+          font-size: 1em;
+          flex: 1 0 50%;
+          box-sizing: border-box;
+          padding: 0.25em 0.15em;
           white-space: nowrap;
 
-          .service-icon i {}
+          .service-icon i {
+            padding: 0 0.1em;
+            text-align: center;
+          }
 
-          .service-name h4 {}
+          .service-name h4 {
+            display: inline;
+            margin: 0;
+            padding: 0;
+          }
         }
       }
     }
@@ -974,27 +1002,30 @@ body {
   }
 }
 @media only screen and (max-width: 768px) {
-  section.launch {
-    height: 15em;
-    margin-top: -1em;
-  }
+  .launch {
+    position: relative;
+    display: block;
+    height: auto;
+    width:100%;
+    margin: 0;
+    overflow-y: auto;
 
-  section.launch div {
-    bottom: initial;
-    top: 0;
-    padding-bottom: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-  }
+    .launch__body {
+      color: white;
+      position: relative;
+      bottom: initial;
+      top: 0;
+      padding-bottom: 0;
+      transform: translate(0, 0);
 
-  section.launch div h2 {
-    font-size: 1.5rem;
+      h2,
+      h5 {
+        font-size: 1.5rem;
+      }
+    }
   }
-
-  section.launch div h5 {}
 }
 /* Contact // Contact // Contact // Contact // Contact // Contact // Contact //  */
-
 .absolutely-centered {
   position: relative;
   display: inline;
@@ -1037,6 +1068,54 @@ section {}
     width: 16.67%;
     width: calc(100% / 6);
     float: leftc;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .wrapper--services {
+    h2 {}
+
+    p {}
+
+    hr {
+      display: block;
+      margin: 1.5em auto;
+      width: 95%;
+      border: 0;
+      height: 1px;
+    }
+
+    .services {
+      .services-list {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0.25rem 2rem;
+        box-sizing: border-box;
+
+        li {
+          text-align: left;
+          font-size: 1em;
+          flex: 1 0 100%;
+          box-sizing: border-box;
+          padding: 0.25em 0.15em;
+          white-space: nowrap;
+
+          .service-icon i {
+            padding: 0 0.1em;
+            text-align: center;
+          }
+
+          .service-name h4 {
+            display: inline;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .button {}
+
+    .services-cta {}
   }
 }
 
