@@ -125,37 +125,48 @@ body {
   position: relative;
   display: block;
   height: 0;
-  padding-top: 60vh;
+  padding-top: 80vh;
   background: transparent;
   background-size: cover;
   background-attachment: bottom;
   background-position: bottom;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.02) 57%, rgba(0, 0, 0, 0) 62%);
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .8);
+
+  &__body {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    padding-bottom: 2.5vw;
+
+    h2,
+    h5 {
+      color: white;
+      text-align: left;
+      //max-width: 66ch;
+      text-shadow: 2px 2px 6px #000000;
+      padding: 0.5rem 1rem;
+    }
+  }
 }
 
 .launch {
-  height: 12.5rem;
   background-image: url("../img/blueskywithsun.jpg");
   background-size: cover;
   position: relative;
 
-  .display-width {
-    .max-width {
-      .launch__body {
-        position: absolute;
-        bottom: 0;
-        padding-bottom: 1rem;
+  .launch__body {
+    bottom: 0;
+    padding-bottom: 1rem;
 
-        h2,
-        h5 {
-          color: white;
-          text-align: left;
-          max-width: 66ch;
-          text-shadow: 2px 2px 6px #000000;
-          padding: 0.5rem 1rem;
-        }
-      }
+    h2,
+    h5 {
+      color: white;
+      text-align: left;
+      //max-width: 66ch;
+      text-shadow: 2px 2px 6px #000000;
+      padding: 0.5rem 1rem;
     }
   }
 }
@@ -691,6 +702,10 @@ body {
   color: #888;
 }
 @media only screen and (max-width: 1100px) {
+  .landing {
+    padding-top: 80vh;
+  }
+
   .wrapper--services {
     h2 {}
 
@@ -801,6 +816,10 @@ body {
         }
       }
     }
+  }
+
+  .landing {
+    padding-top: 75vh;
   }
 
   .wrapper--services {
@@ -1006,7 +1025,7 @@ body {
     position: relative;
     display: block;
     height: auto;
-    width:100%;
+    width: 100%;
     margin: 0;
     overflow-y: auto;
 
@@ -1026,6 +1045,7 @@ body {
   }
 }
 /* Contact // Contact // Contact // Contact // Contact // Contact // Contact //  */
+
 .absolutely-centered {
   position: relative;
   display: inline;
