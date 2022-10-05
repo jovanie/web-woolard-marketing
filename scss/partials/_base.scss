@@ -1,0 +1,24 @@
+//main:../wm-styles.scss
+// base.scss
+
+.button {
+  &__container {
+    position: relative;
+    margin:2rem 0;
+  }
+  text-decoration: none;
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  font-size: 2rem;
+  cursor: pointer;
+
+  &--box {
+    padding: 1rem 2rem;
+  }
+
+  &--black {
+    background: #202020;
+    color: white;
+  }
+}
