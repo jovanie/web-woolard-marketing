@@ -1,0 +1,299 @@
+<!-- Notes & Comments
+Version 1.0
+May 9th, 2019
+Initial Homepage Design and Layout Setup
+Jovanie De La Cruz & Woolard Marketing
+
+
+Inspiration:
+https://www.mojomedialabs.com/
+https://jbchicago.com/
+https://jstonermarketing.com/
+
+<!-- Document Begins -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Page Information -->
+  <meta charset="UTF-8">
+  <title>Woolard Marketing</title>
+  <base href="index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CDN -->
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> -->
+  <link href="fontawesome/css/all.css" rel="stylesheet">
+  <script src="fontawesome/js/all.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+  <script src="js/parallax.min.js"></script>
+  <!-- Custom & Hosted -->
+  <link rel="stylesheet" href="css/wm-fonts.css">
+  <link rel="stylesheet" href="css/wm_styles.min.css">
+</head>
+
+<body>
+  <div class="wrapper--header">
+    <script>
+      $('.wrapper--header').load('header.html .header');
+    </script>
+
+  </div>
+  <div class="container--main">
+
+    <!--<section class="landing" data-parallax="scroll" data-image-src="img/hoemann1e_copy.jpg" data-position="center -475px">
+    </section> -->
+    <!-- https://pixabay.com/videos/city-metropole-downtown-3618/ -->
+    <section class="landing display-width" data-parallax="scroll" data-image-src="video/City - 3618.gif" data-position="top ">
+      <div class="landing__body max-width">
+        <h2>
+          Launch Your Business Further
+        </h2>
+        <h5>
+          We are focused on developing and executing strategies that are authentic and enduring. Whether you’re just starting your business, adapting to a new market, or need to switch up your strategy, we want to work with you.
+        </h5>
+      </div>
+    </section>
+    <!--<section class="launch display-width">
+      <div class="launch__body max-width">
+        <h2>
+          Launch Your Business Further
+        </h2>
+        <h5>
+          We are focused on developing and executing strategies that are authentic and enduring. Whether you’re just starting your business, adapting to a new market, or need to switch up your strategy, we want to work with you.
+        </h5>
+      </div>
+    </section>-->
+
+
+    <div class="values display-width">
+      <div class="values__thumbnails">
+        <a class="values__thumbnails__entry active" id="first">
+          <span class="one-third value">
+            <div class="background"></div>
+            <div class="gradient"></div>
+            <div class="text">
+              <h2>Authentic</h2>
+              <h6>Lorem Ipsum</h6>
+            </div>
+          </span>
+        </a>
+        <a class="values__thumbnails__entry" id="second">
+          <span class="one-third value">
+            <div class="background"></div>
+            <div class="gradient"></div>
+            <div class="text">
+              <h2>Collaborative</h2>
+              <h6>Lorem Ipsum</h6>
+            </div>
+          </span>
+        </a>
+        <a class="values__thumbnails__entry" id="third">
+          <span class="one-third value">
+            <div class="background"></div>
+            <div class="gradient"></div>
+            <div class="text">
+              <h2>Dynamic</h2>
+              <h6>Lorem Ipsum</h6>
+            </div>
+          </span>
+        </a>
+      </div>
+      <div class="values__content" style="margin:0;">
+        <div class="values__content__entry active" id="first" style="margin:0;">
+          <div class="display-width">
+            <div class=" max-width">
+              <div class="text">
+                <h2>Authentic</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id accumsan leo. Sed vestibulum tellus sed arcu porttitor feugiat. Sed in aliquam nisl, nec gravida risus. Etiam lobortis faucibus metus, sit amet vehicula risus
+                  iaculis
+                  eget.</p>
+                <a class="rounded">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="values__content__entry" id="second">
+          <div class="display-width">
+            <div class=" max-width">
+              <div class="text">
+                <h2>Collaborative</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id accumsan leo. Sed vestibulum tellus sed arcu porttitor feugiat. Sed in aliquam nisl, nec gravida risus. Etiam lobortis faucibus metus, sit amet vehicula risus
+                  iaculis
+                  eget. </p>
+                <a class="rounded">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="values__content__entry" id="third">
+          <div class="display-width">
+            <div class=" max-width">
+              <div class="text">
+                <h2>Dynamic</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id accumsan leo. Sed vestibulum tellus sed arcu porttitor feugiat. Sed in aliquam nisl, nec gravida risus. </p>
+                <a class="rounded">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="wrapper--services">
+      <h2>
+        HOW WE CAN HELP
+      </h2>
+      <p>
+        Nunc et nibh pharetra purus ultricies sodales. Vestibulum et erat vulputate, lacinia lectus eget, efficitur nunc.
+      </p>
+      <hr>
+      <div class="services">
+        <div class="display-width">
+          <div class=" max-width margin--auto">
+            <div class="services-list">
+              <li>
+                <span class="service-icon">
+                  <i class="far fa-edit"></i>
+                </span>
+                <span class="service-name">
+                  <h4>
+                    Branding
+                  </h4>
+                </span>
+              </li>
+              <li>
+                <span class="service-icon">
+                  <i class="fa fa-clipboard-list" aria-hidden="true"></i>
+                </span>
+                <span class="service-name">
+                  <h4>
+                    Strategic Marketing
+                  </h4>
+                </span>
+              </li>
+              <li>
+                <span class="service-icon">
+                  <i class="fa fa-newspaper" aria-hidden="true"></i>
+                </span>
+                <span class="service-name">
+                  <h4>
+                    Multichannel Advertising
+                  </h4>
+                </span>
+              </li>
+              <li>
+                <span class="service-icon">
+                  <i class="far fa-thumbs-up"></i>
+                </span>
+                <span class="service-name">
+                  <h4>
+                    Digital Marketing
+                  </h4>
+                </span>
+              </li>
+              <li>
+                <span class="service-icon">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                </span>
+                <span class="service-name">
+                  <h4>
+                    Website Development
+                  </h4>
+                </span>
+              </li>
+              <li>
+                <span class="service-icon">
+                  <i class="fa fa-comments" aria-hidden="true"></i>
+                </span>
+                <span class="service-name">
+                  <h4>
+                    Public Relations
+                  </h4>
+                </span>
+              </li>
+              <li>
+                <span class="service-icon">
+                  <i class="fa fa-grin-beam" aria-hidden="true"></i>
+                </span>
+                <span class="service-name">
+                  <h4>
+                    Friendly Faces
+                  </h4>
+                </span>
+              </li>
+              <li>
+                <span class="service-icon">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <span class="service-name">
+                  <h4>
+                    Additional Services
+                  </h4>
+                </span>
+              </li>
+              <div class="clearer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <a class="services-cta" id="">
+          Button
+        </a>
+      </div>
+    </section>
+
+
+    <div class="wrapper--testimonials">
+      <section class="testimonials">
+        <div class="testimonials__entry active">
+          <div class="testimonials__entry__photo">
+            <img src="img/man-wearing-hat.jpg" alt="" class="testimonials__entry__photo__img">
+          </div>
+          <div class="testimonials__entry__description">
+            <div class="testimonials__entry__description__quote">
+              <h3>Quotation from a satisfied customer regarding the quality work Woolard Marketing has done.
+              </h3>
+            </div>
+
+            <p class="testimonials__entry__description__author">
+              <span class="testimonials__entry__description__author__name">John Doe</span> |
+              <span class="testimonials__entry__description__author__company-position">A Satisfied Customer</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+  <div class="wrapper--contact ">
+    <section class="contact max-width">
+      <h3 class="contact__title">Ready? Let's Chat.</h3>
+      <form class="contact__form" role="form" method="post" action="contact-form.php">
+        <div class="contact__form__section contact__form__section--left">
+          <fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Name" id="name" name="name" type="text" tabindex="1" required></fieldset>
+          <fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Email Address" id="email" name="email" type="email" tabindex="2" required></fieldset>
+          <fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Phone Number" id="phone" name="phone" type="tel" tabindex="3" required></fieldset>
+        </div>
+        <div class="contact__form__section contact__form__section--right">
+          <fieldset class="contact__form__section__field"><input class="contact__form__section__field__input" placeholder="Company" id="company" name="company" type="text" tabindex="3" required></fieldset>
+          <fieldset class="contact__form__section__field contact__form__section__field--text"><textarea class="contact__form__section__field__text" placeholder="Tell us about your project" id="message" name="message" tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset class="contact__form__section__field"><button class="contact__form__section__field__button" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button></fieldset>
+          <div id="form-messages" class="h3 success" style="text-align:center;"></div>
+        </div>
+      </form>
+    </section>
+  </div>
+  <div class="wrapper--footer">
+    <script>
+      $('.wrapper--footer').load('footer.html .footer');
+    </script>
+  </div>
+
+  <script src="js/wm-animations.js"></script>
+  <script src='js/values-nav.js'></script>
+
+</body>

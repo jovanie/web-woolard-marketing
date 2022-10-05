@@ -1,0 +1,88 @@
+//main:../wm-styles.scss
+// type.scss
+
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  margin-bottom: 1.75rem;
+}
+
+h2 {
+  margin-bottom: 1.5em;
+}
+
+h3 {
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  margin-bottom: 0.5em;
+}
+
+h5 {
+  margin-bottom: 0.5em;
+}
+
+strong {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+p.thin {
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #6c757d !important;
+}
+
+.text-opacity {
+  --bs-text-opacity: 0.6;
+  opacity: 0.6;
+}
+@media screen and (min-width:50px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin-top: 1.5rem;
+  }
+
+  h2 {
+    font-size: 3.8rem;
+    margin-top: 1.5rem;
+  }
+
+  h3 {
+    font-size: 2.6rem;
+    margin-top: 1.5rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  p,
+  strong {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width:768px) {}
+@media screen and (min-width:1024px) {}

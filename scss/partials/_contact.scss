@@ -1,0 +1,202 @@
+//main:../wm-styles.scss
+// contact.scss
+@media screen and (min-width:50px) {
+  .contact {
+    background-color: #DDDDDD;
+
+    &__container {
+      position: relative;
+    }
+
+    &__form {
+      &__section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        min-height: 20rem;
+
+        &__field {
+          width: 100%;
+          flex: 1 1 auto;
+          height: 5rem;
+          margin: 0;
+          padding: 0;
+          border: 1px solid #DDD;
+          font-family: LiberationSans-Bold;
+          font-size: 1.5rem;
+
+          &--name {
+            order: 1;
+          }
+
+          &--email {
+            order: 2;
+          }
+
+          &--phone {
+            order: 3;
+          }
+
+          &--company {
+            order: 5;
+          }
+
+          &--text {
+            order: 6;
+            height: 10rem;
+            flex: inherit;
+          }
+
+          &--submit {
+            order: 8;
+          }
+
+          &--break {
+            order: 4;
+            visibility: hidden;
+            display: none;
+          }
+        }
+      }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea,
+    button[type="submit"],
+     {
+      background: #EFEFEF;
+      height: 100%;
+    }
+
+    fieldset {}
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea {
+      width: 100%;
+      display: block;
+      position: relative;
+      padding: 0.75em 0 0.75em 0.75em;
+      border: 1px solid #DDD;
+    }
+
+    input[type="text"],
+    textarea {}
+
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="tel"]:hover,
+    input[type="url"]:hover,
+    textarea:hover {
+      -webkit-transition: border-color 0.3s ease-in-out;
+      -moz-transition: border-color 0.3s ease-in-out;
+      transition: border-color 0.3s ease-in-out;
+      border: 1px solid #AAA;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid #DDD;
+      background: #EFEFEF;
+      color: #888;
+    }
+
+    button[type="submit"]:hover {
+      background: #707070;
+      color: white;
+      -webkit-transition: background 0.2s ease-in-out;
+      -moz-transition: background 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button[type="submit"]:active {
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 0;
+      border: 1px solid #999;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #888;
+    }
+
+    :-moz-placeholder {
+      color: #888;
+    }
+
+    ::-moz-placeholder {
+      color: #888;
+    }
+
+    :-ms-input-placeholder {
+      color: #888;
+    }
+  }
+}
+@media screen and (min-width:768px) {
+  .contact {
+    &__container {}
+
+    &__form {
+      &__section {
+        width: 100%;
+        height: 20rem;
+        min-height: 20rem;
+
+        &__field {
+          width: 50%;
+          flex: 0 1 25%;
+
+          &--name {}
+
+          &--email {}
+
+          &--phone {}
+
+          &--company {}
+
+          &--text {
+            flex: 1 1 50%;
+          }
+
+          &--submit {}
+
+          &--break {
+            flex-basis: 25%;
+            order: 4;
+            visibility: visible;
+            display: block;
+          }
+        }
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="url"],
+      textarea,
+      button[type="submit"],
+       {
+        height: 100%;
+      }
+    }
+  }
+}
+@media screen and (min-width:1024px) {}

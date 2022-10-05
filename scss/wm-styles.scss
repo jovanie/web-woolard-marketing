@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Oswald-Light;
+  letter-spacing: 1.15px;
+}
+
+@import "partials/font";
+@import "partials/type";
+@import "partials/variables";
+@import "partials/custom-classes";
+@import "partials/base";
+@import "partials/nav";
+@import "partials/landing";
+@import "partials/services";
+@import "partials/contact";
+@import "partials/footer";
