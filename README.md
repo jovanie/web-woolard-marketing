@@ -1,4 +1,4 @@
-Woolard Marketing
+{{ site.description }}
 
 - HOME
 - ABOUT US
@@ -17,4 +17,3 @@ Great marketing requires a thorough knowledge of marketing fundamentals and the 
 ### Welcome to Woolard Marketing!
 
 #### More About Us
-
