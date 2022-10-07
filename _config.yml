@@ -1,8 +1,7 @@
 # Site settings
 title: Woolard Marketing
-author:
-  name: Jovanie De La Cruz
+name: Jovanie De La Cruz
 description: "For Woolard Marketing"
 
 # Build settings
-baseurl : /woolard-marketing-website
+baseurl: "/woolard-marketing-website"
