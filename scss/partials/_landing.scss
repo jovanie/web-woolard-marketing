@@ -9,12 +9,17 @@
       overflow: hidden;
       z-index: 250;
 
+      .img-fluid {
+        img {}
+      }
+
       &__headline {
         position: absolute;
         width: 100%;
         bottom: 0;
         color: white;
-        margin:0; padding:0;
+        margin: 0;
+        padding: 0;
         font-size: 2.25em;
       }
     }
@@ -24,13 +29,12 @@
       position: relative;
       bottom: 0;
       z-index: 250;
-      padding:5rem 0;
+      padding: 5rem 0;
 
       &__headline {
         font-size: 2.25em;
 
-        h1 {
-        }
+        h1 {}
       }
 
       &__subtitle {
@@ -48,5 +52,32 @@
     }
   }
 }
-@media screen and (min-width:768px) {}
+@media screen and (min-width:768px) {
+  &__hero {
+
+    .img-fluid {
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;}
+    }
+
+    &__headline {
+    }
+  }
+
+  &__goals {
+
+    &__headline {
+
+      h1 {}
+    }
+
+    &__subtitle {
+
+      h3 {
+      }
+    }
+  }
+}
 @media screen and (min-width:1024px) {}

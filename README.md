@@ -1,5 +1,3 @@
-{{ site.description }}
-
 - HOME
 - ABOUT US
 - SERVICES
