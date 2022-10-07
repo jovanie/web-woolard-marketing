@@ -51,31 +51,96 @@
       }
     }
   }
+
+  .ideas {
+    background: $background-gray;
+    &__container {}
+
+    &__entry {
+      display: flex;
+      flex-direction: column;
+      gap: 0 5rem;
+      align-items: center;
+
+      &__media {
+        flex: 1 0 100%;
+        width: 100%;
+
+        .aspect-img {
+          position: relative;
+          width: 100%;
+          padding-top: calc(4 / 3 * 100%);
+          overflow: hidden;
+          /* 16:9 Aspect Ratio */
+          .img-fluid {
+            width: 100%;
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+          }
+        }
+      }
+
+      &__text {
+        flex: 1 0 100%;
+        text-align: left;
+      }
+    }
+  }
 }
 @media screen and (min-width:768px) {
   &__hero {
-
     .img-fluid {
       img {
         height: 100%;
         width: auto;
-        object-fit: contain;}
+        object-fit: contain;
+      }
     }
 
-    &__headline {
-    }
+    &__headline {}
   }
 
   &__goals {
-
     &__headline {
-
       h1 {}
     }
 
     &__subtitle {
+      h3 {}
+    }
+  }
+  .ideas {
+    background: $background-gray;
+    &__container {}
 
-      h3 {
+    &__entry {
+      display: flex;
+      flex-direction: row;
+      gap: 0 5rem;
+      align-items: center;
+
+      &__media {
+        flex: 1 1 auto;
+
+        .aspect-img {
+          position: relative;
+          width: 40vw;
+          padding-top: calc(4 / 3 * 100%);
+          overflow: hidden;
+          /* 16:9 Aspect Ratio */
+          .img-fluid {
+            width: 100%;
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+          }
+        }
+      }
+
+      &__text {
+        flex: 1 1 auto;
+        text-align: center;
       }
     }
   }
