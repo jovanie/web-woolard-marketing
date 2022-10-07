@@ -28,12 +28,17 @@
 
         &__icon {
           i {
+            color:$red-text;
             font-size: 3rem;
             padding: 1.5rem;
+            &:hover {
+              color:$orange-base;
+            }
           }
         }
 
-        &__text {}
+        &__text {font-size: 1.75rem;
+        }
       }
     }
 

@@ -1,4 +1,35 @@
 //main:../wm-styles.scss
 // _variables.scss
-
 $max-width: 1200px;
+$woolard-red: #ac1e24;
+$woolard-orange: #e75a27;
+
+//complimentary colors
+$red-base : #AD1F24;
+$red-hi : #C33626;
+$red-text : #BC2E25;
+$orange-base : #E86635;
+
+.color-shadow {
+  &--orange {
+    text-shadow: 2px 2px $orange-base;
+  }
+
+  &--red {
+    text-shadow: 2px 2px $red-base;
+  }
+
+  &--white {
+    text-shadow: 2px 2px white;
+  }
+}
+
+.text-color {
+  &--orange {
+    color: $orange-base;
+  }
+
+  &--red {
+    color: $red-text;
+  }
+}

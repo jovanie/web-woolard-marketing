@@ -11,7 +11,7 @@
 
     &__logo {
       flex: 0 1 auto;
-      height: 7.5rem;
+      height: 5rem;
       width: 100%;
 
       img {
@@ -60,6 +60,7 @@
     padding: 2.5rem 5rem;
 
     &__logo {
+      height: 7.5rem;
       flex: 0 1 25%;
 
       img {
@@ -90,6 +91,15 @@
           text-decoration: none;
           font-size: 2rem;
           padding: 1rem;
+
+          &:hover {
+            color: $red-text;
+          }
+
+          &.active {
+            text-decoration: underline;
+            text-decoration-color: $red-hi;
+          }
         }
       }
     }
