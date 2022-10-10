@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WIP Woolard Marketing</title>
+  <meta name="description" content="">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Woolard Marketing">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="image.png">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io//favicon-16x16.png">
+  <link rel="manifest" href="img/favicon_io/site.webmanifest">
+
+  <!-- Vendor files -->
+  <!-- + Normalize -->
+  <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" rel="stylesheet">
+  <!-- + Font Awesome -->
+  <link href="vendor/fontawesome-free/css/fontawesome.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/brands.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/solid.css" rel="stylesheet">
+  <!-- + Jquery -->
+  <script type="text/javascript" src="vendor/jquery-3.6.1.min.js"></script>
+  <!-- + Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-grid.min.css">
+
+  <link rel="stylesheet" href="scss/wm-styles.min.css">
+
+</head>
+
+<body>
+  <div class="page-body">
+    <div class="load--nav"></div>
+    <script>
+      $('.load--nav').load('header.html .nav');
+    </script>
+
+    <section class="template">
+      <div class="template__container max-width block-padding">
+        <div class="template__entry">
+          <h1>Template</h1>
+        </div>
+      </div>
+    </section>
+
+    <div class="load--contact"></div>
+    <script>
+      $('.load--contact').load('header.html .contact');
+    </script>
+    <div class="load--footer"></div>
+    <script>
+      $('.load--footer').load('header.html .footer');
+    </script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("a#nav--home").addClass("active");
+      });
+    </script>
+  </div>
+</body>

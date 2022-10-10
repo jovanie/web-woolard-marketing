@@ -40,45 +40,16 @@
 
   <link rel="stylesheet" href="scss/wm-styles.min.css">
 
+
 </head>
 
 <body>
   <div class="page-body" id="home">
-    <div class="nav">
-      <div class="nav__logo">
-        <img src="img/wm-logo.png" alt="Woolard Marketing Logo">
-      </div>
-      <div class="nav__button"><i class="fa-solid fa-bars"></i></div>
-      <ul class="nav__menu">
-        <li class="nav__menu__item"><a href="#" class="active">Home</a></li>
-        <li class="nav__menu__item"><a href="#">About</a></li>
-        <li class="nav__menu__item"><a href="#">Services</a></li>
-        <li class="nav__menu__item"><a href="#">Work</a></li>
-        <li class="nav__menu__item"><a href="#">Contact</a></li>
-      </ul>
-      <script>
-        $(window).resize(function() {
-          if (window.matchMedia('(min-width:1024px)').matches) {
-            $(".nav__menu").show();
-          } else if (window.matchMedia('(min-width:768px)').matches) {
-            $(".nav__menu").show();
-          } else if (window.matchMedia('(min-width:50px)').matches) {
-            $(".nav__menu").hide();
-            $(".nav__menu").addClass(".nav__menu--active");
-            $(".nav__button").unbind("click");
-            $(".nav__button").click(function() {
-              $(".nav__menu").slideToggle();
-            });
-            $(document).on("click", function(event) {
-              var $trigger = $(".nav");
-              if ($trigger !== event.target && !$trigger.has(event.target).length) {
-                $(".nav__menu").slideUp();
-              }
-            });
-          }
-        }).resize();
-      </script>
-    </div>
+
+    <div class="nav__container nav__container--load"></div>
+    <script>
+      $('.nav__container--load').load('header.html .nav__container');
+    </script>
     <div class="landing">
       <div class="landing__hero">
         <div class="img-fluid"><img src="img/darrelhoemann-champaign-photo.png" alt=""></div>
@@ -110,7 +81,7 @@
         <div class="ideas__entry">
           <div class="ideas__entry__media">
             <div class="aspect-img">
-              <div class="img-fluid"><img src="https://images.pexels.com/photos/2560898/pexels-photo-2560898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+              <div class="img-fluid"><img src="https://images.pexels.com/photos/13817351/pexels-photo-13817351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
             </div>
           </div>
           <div class="ideas__entry__text">
@@ -124,156 +95,124 @@
         </div>
       </div>
     </section>
+    <section class="services">
+      <div class="max-width block-padding">
+        <div class="services__headline">
+          <h3 class="text-color--red">Our Services</h3>
+        </div>
+        <div class="services__subtitle">
+          <h4>What we offer to help your business move forward.</h4>
+        </div>
+        <div class="services__table">
+          <div class="services__table__entry">
+            <div class="services__table__entry__icon"><i class="fa-solid fa-pen-to-square"></i></div>
+            <div class="services__table__entry__text">Branding</div>
+          </div>
+          <div class="services__table__entry">
+            <div class="services__table__entry__icon"><i class="fa-solid fa-clipboard-list"></i></div>
+            <div class="services__table__entry__text">Strategic Marketing</div>
+          </div>
+          <div class="services__table__entry">
+            <div class="services__table__entry__icon"><i class="fa-solid fa-newspaper"></i></div>
+            <div class="services__table__entry__text">Multichannel Advertising</div>
+          </div>
+          <div class="services__table__entry">
+            <div class="services__table__entry__icon"><i class="fa-regular fa-thumbs-up"></i></div>
+            <div class="services__table__entry__text">Digital Marketing</div>
+          </div>
+          <div class="services__table__entry">
+            <div class="services__table__entry__icon"><i class="fa-solid fa-code"></i></div>
+            <div class="services__table__entry__text">Website Development</div>
+          </div>
+          <div class="services__table__entry">
+            <div class="services__table__entry__icon"><i class="fa-solid fa-comments"></i></div>
+            <div class="services__table__entry__text">Public Relations</div>
+          </div>
+          <div class="services__table__entry">
+            <div class="services__table__entry__icon"><i class="fa-solid fa-face-smile-wink"></i></div>
+            <div class="services__table__entry__text">Friendly Faces</div>
+          </div>
+          <div class="services__table__entry">
+            <div class="services__table__entry__icon"><i class="fa-solid fa-plus"></i></div>
+            <div class="services__table__entry__text">Additional Services</div>
+          </div>
+        </div>
+        <div class="button__container">
+          <a href="#" class="button button--box button--red">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <section class="works">
+      <div class="works__container max-width block-padding">
+        <div class="works__headline">
+          <h3 class="0mp text-color--red">Featured Works</h3>
+        </div>
+        <div class="works__grid__container">
+          <div class="works__grid works__grid--left">
+            <div class="works__grid__entry">
+              <div class="works__grid__entry__media">
+                <div class="aspect-img">
+                  <div class="img-fluid"><img src="https://images.pexels.com/photos/5328302/pexels-photo-5328302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                </div>
+              </div>
+              <div class="works__grid__entry__text">
+                <h4 class="0mp ">ABC Recycling Company</h3>
+                  <strong class="0mp text-color--red">Social Media, Advertising, Newsletter</strong>
+              </div>
+            </div>
+            <div class="works__grid__entry">
+              <div class="works__grid__entry__media">
+                <div class="aspect-img">
+                  <div class="img-fluid"><img src="https://images.pexels.com/photos/12303537/pexels-photo-12303537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                </div>
+              </div>
+              <div class="works__grid__entry__text">
+                <h4 class="0mp ">ABC Recycling Company</h3>
+                  <strong class="0mp text-color--red">Social Media, Advertising, Newsletter</strong>
+              </div>
+            </div>
+          </div>
+          <div class="works__grid works__grid--right">
+            <div class="works__grid__entry">
+              <div class="works__grid__entry__media">
+                <div class="aspect-img">
+                  <div class="img-fluid"><img src="https://images.pexels.com/photos/13870983/pexels-photo-13870983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                </div>
+              </div>
+              <div class="works__grid__entry__text">
+                <h4 class="0mp ">ABC Recycling Company</h3>
+                  <strong class="0mp text-color--red">Social Media, Advertising, Newsletter</strong>
+              </div>
+            </div>
+            <div class="works__grid__entry">
+              <div class="works__grid__entry__media">
+                <div class="aspect-img">
+                  <div class="img-fluid"><img src="https://images.pexels.com/photos/2560898/pexels-photo-2560898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
+                </div>
+              </div>
+              <div class="works__grid__entry__text">
+                <h4 class="0mp ">ABC Recycling Company</h3>
+                  <strong class="0mp text-color--red">Social Media, Advertising, Newsletter</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="load--contact"></div>
+    <script>
+      $('.load--contact').load('header.html .contact');
+    </script>
+    <div class="load--footer"></div>
+    <script>
+      $('.load--footer').load('header.html .footer');
+    </script>
   </div>
-  <section class="services">
-    <div class="max-width block-padding">
-      <div class="services__headline">
-        <h3 class="text-color--red">Our Services</h3>
-      </div>
-      <div class="services__subtitle">
-        <h4>What we offer to help your business move forward.</h4>
-      </div>
-      <div class="services__table">
-        <div class="services__table__entry">
-          <div class="services__table__entry__icon"><i class="fa-solid fa-pen-to-square"></i></div>
-          <div class="services__table__entry__text">Branding</div>
-        </div>
-        <div class="services__table__entry">
-          <div class="services__table__entry__icon"><i class="fa-solid fa-clipboard-list"></i></div>
-          <div class="services__table__entry__text">Strategic Marketing</div>
-        </div>
-        <div class="services__table__entry">
-          <div class="services__table__entry__icon"><i class="fa-solid fa-newspaper"></i></div>
-          <div class="services__table__entry__text">Multichannel Advertising</div>
-        </div>
-        <div class="services__table__entry">
-          <div class="services__table__entry__icon"><i class="fa-regular fa-thumbs-up"></i></div>
-          <div class="services__table__entry__text">Digital Marketing</div>
-        </div>
-        <div class="services__table__entry">
-          <div class="services__table__entry__icon"><i class="fa-solid fa-code"></i></div>
-          <div class="services__table__entry__text">Website Development</div>
-        </div>
-        <div class="services__table__entry">
-          <div class="services__table__entry__icon"><i class="fa-solid fa-comments"></i></div>
-          <div class="services__table__entry__text">Public Relations</div>
-        </div>
-        <div class="services__table__entry">
-          <div class="services__table__entry__icon"><i class="fa-solid fa-face-smile-wink"></i></div>
-          <div class="services__table__entry__text">Friendly Faces</div>
-        </div>
-        <div class="services__table__entry">
-          <div class="services__table__entry__icon"><i class="fa-solid fa-plus"></i></div>
-          <div class="services__table__entry__text">Additional Services</div>
-        </div>
-      </div>
-      <div class="button__container">
-        <a href="#" class="button button--box button--red">Learn More</a>
-      </div>
-    </div>
-  </section>
-  <section class="works">
-    <div class="works__container max-width block-padding">
-      <div class="works__headline">
-        <h3 class="0mp text-color--red">Featured Works</h3>
-      </div>
-      <div class="works__grid__container">
-        <div class="works__grid works__grid--left">
-          <div class="works__grid__entry">
-            <div class="works__grid__entry__media">
-              <div class="aspect-img">
-                <div class="img-fluid"><img src="https://images.pexels.com/photos/2560898/pexels-photo-2560898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
-              </div>
-            </div>
-            <div class="works__grid__entry__text">
-              <h4 class="0mp ">ABC Recycling Company</h3>
-                <strong class="0mp text-color--red">Social Media, Advertising, Newsletter</strong>
-            </div>
-          </div>
-          <div class="works__grid__entry">
-            <div class="works__grid__entry__media">
-              <div class="aspect-img">
-                <div class="img-fluid"><img src="https://images.pexels.com/photos/2560898/pexels-photo-2560898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
-              </div>
-            </div>
-            <div class="works__grid__entry__text">
-              <h4 class="0mp ">ABC Recycling Company</h3>
-                <strong class="0mp text-color--red">Social Media, Advertising, Newsletter</strong>
-            </div>
-          </div>
-        </div>
-        <div class="works__grid works__grid--right">
-          <div class="works__grid__entry">
-            <div class="works__grid__entry__media">
-              <div class="aspect-img">
-                <div class="img-fluid"><img src="https://images.pexels.com/photos/2560898/pexels-photo-2560898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
-              </div>
-            </div>
-            <div class="works__grid__entry__text">
-              <h4 class="0mp ">ABC Recycling Company</h3>
-                <strong class="0mp text-color--red">Social Media, Advertising, Newsletter</strong>
-            </div>
-          </div>
-          <div class="works__grid__entry">
-            <div class="works__grid__entry__media">
-              <div class="aspect-img">
-                <div class="img-fluid"><img src="https://images.pexels.com/photos/2560898/pexels-photo-2560898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></div>
-              </div>
-            </div>
-            <div class="works__grid__entry__text">
-              <h4 class="0mp ">ABC Recycling Company</h3>
-                <strong class="0mp text-color--red">Social Media, Advertising, Newsletter</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="contact">
-    <div class="contact__container max-width block-padding">
-      <h3 class="contact__title text-color--red">Ready? Let's Chat.</h3>
-      <form class="contact__form" role="form" method="post" action="contact-form.php">
-        <div class="contact__form__section">
-          <fieldset class="contact__form__section__field contact__form__section__field--name"><input class="contact__form__section__field__input" placeholder="Name" id="name" name="name" type="text" tabindex="1" required></fieldset>
-          <fieldset class="contact__form__section__field contact__form__section__field--email"><input class="contact__form__section__field__input" placeholder="Email Address" id="email" name="email" type="email" tabindex="2" required></fieldset>
-          <fieldset class="contact__form__section__field contact__form__section__field--phone"><input class="contact__form__section__field__input" placeholder="Phone Number" id="phone" name="phone" type="tel" tabindex="3" required></fieldset>
-          <fieldset class="contact__form__section__field contact__form__section__field--company"><input class="contact__form__section__field__input" placeholder="Company" id="company" name="company" type="text" tabindex="4" required></fieldset>
-          <div class="contact__form__section__field contact__form__section__field--text"><textarea class="contact__form__section__field__text" placeholder="Tell us about your project" id="message" name="message" tabindex="5" required></textarea>
-          </div>
-          <div class="contact__form__section__field contact__form__section__field--break">&nbsp;</div>
-          <fieldset class="contact__form__section__field contact__form__section__field--submit"><button class="contact__form__section__field__button" name="submit" type="submit" role="button" id="contact-submit" data-submit="...Sending"
-              tabindex="6">Submit</button></fieldset>
-          <div id="form-messages" class="h3 success" style="text-align:center;"></div>
-        </div>
-      </form>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="footer__container max-width block-padding">
-      <div class="footer__entry" id="logo">
-        <div class="img-fluid img-fluid--height"><img src="img/wm-logo-square.png" alt=""></div>
-      </div>
-      <div class="footer__entry" id="brand"><strong>Think BIGGER. Create BETTER.</strong>
-      </div>
-      <div class="footer__entry" id="contact">
-        <strong>Woolard Marketing</strong>
-        <li>10 E Taylor</li>
-        <li>Champaign, IL</li>
-      </div>
-      <div class="footer__entry" id="bonnie">
-        <li><strong>Bonnie Woolard</strong></li>
-        <li><a href="#">(217) XXX-XXXX</a></li>
-        <li><a href="mailto:#">bonnie@woolardmarketing.com</a></li>
-      </div>
-      <div class="footer__entry" id="links">
-        <li><strong>Quick Links</strong></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Who We Are</a></li>
-        <li><a href="#">What We Do</a></li>
-        <li><a href="#">Our Work</a></li>
-        <li><a href="#">Contact</a></li>
-      </div>
-    </div>
-  </footer>
-  </div>
+  <script type="text/javascript" src="js/nav.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("a#nav--home").addClass("active");
+    });
+  </script>
 </body>

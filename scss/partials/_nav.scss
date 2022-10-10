@@ -2,6 +2,9 @@
 // nav.scss
 @media screen and (min-width:50px) {
   .nav {
+    &__container {
+      display: block;
+    }
     font-family: Oswald-Light;
     margin: 0 auto;
     max-width: $max-width;
