@@ -54,6 +54,7 @@
 
   .ideas {
     background: $background-gray;
+
     &__container {}
 
     &__entry {
@@ -63,7 +64,7 @@
       align-items: center;
 
       &__media {
-        flex: 1 0 100%;
+        flex: 1 0 5%;
         width: 100%;
 
         .aspect-img {
@@ -84,6 +85,67 @@
       &__text {
         flex: 1 0 100%;
         text-align: left;
+      }
+    }
+  }
+
+  .works {
+    background: $background-gray;
+
+    &__container {}
+
+    &__headline {
+      display: block;
+      width: 100%;
+    }
+
+    &__grid {
+      &__container {
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+      width: 100%;
+      flex: 1 0 100%;
+      display: block;
+
+      &--left {
+        padding-right: 0rem;
+      }
+
+      &--right {
+        padding-left: 0rem;
+        margin-top: 0rem;
+      }
+
+      &__entry {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5rem;
+
+        &__media {
+          width: 100%;
+
+          .aspect-img {
+            position: relative;
+            width: 100%;
+            padding-top: calc(4 / 3 * 100%);
+            overflow: hidden;
+            /* 16:9 Aspect Ratio */
+            .img-fluid {
+              width: 100%;
+              position: absolute;
+              object-fit: cover;
+              top: 0;
+            }
+          }
+        }
+
+        &__text {
+          width: 100%;
+          text-align: left;
+        }
       }
     }
   }
@@ -110,8 +172,10 @@
       h3 {}
     }
   }
+
   .ideas {
     background: $background-gray;
+
     &__container {}
 
     &__entry {
@@ -121,11 +185,11 @@
       align-items: center;
 
       &__media {
-        flex: 1 1 auto;
+        flex: 1 0 50%;
 
         .aspect-img {
           position: relative;
-          width: 40vw;
+          width: 100%;
           padding-top: calc(4 / 3 * 100%);
           overflow: hidden;
           /* 16:9 Aspect Ratio */
@@ -139,8 +203,69 @@
       }
 
       &__text {
-        flex: 1 1 auto;
+        flex: 1 1 50%;
         text-align: center;
+      }
+    }
+  }
+
+  .works {
+    background: $background-gray;
+
+    &__container {}
+
+    &__headline {
+      display: block;
+      width: 100%;
+    }
+
+    &__grid {
+      &__container {
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: row;
+      }
+      width: 50%;
+      flex: 1 0 50%;
+      display: block;
+
+      &--left {
+        padding-right: 2.5rem;
+      }
+
+      &--right {
+        padding-left: 2.5rem;
+        margin-top: 10rem;
+      }
+
+      &__entry {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5rem;
+
+        &__media {
+          width: 100%;
+
+          .aspect-img {
+            position: relative;
+            width: 100%;
+            padding-top: calc(4 / 3 * 100%);
+            overflow: hidden;
+            /* 16:9 Aspect Ratio */
+            .img-fluid {
+              width: 100%;
+              position: absolute;
+              object-fit: cover;
+              top: 0;
+            }
+          }
+        }
+
+        &__text {
+          width: 100%;
+          text-align: left;
+        }
       }
     }
   }
