@@ -9,15 +9,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2rem 0;
+    padding-top:2rem;
     transition: box-shadow 0.15s ease-in-out;
 
     &__logo {
       padding-left: 2rem;
-      flex: 1 0 auto;
+      flex: 0 1 auto;
       align-self: center;
-      width: 50%;
       height: 5rem;
+      margin-bottom:2rem;
 
       img {
         height: 100%;
@@ -30,7 +30,7 @@
       flex: 0 1 5%;
       width: 5rem;
       font-size: 3rem;
-      margin-right: 1rem;
+      margin:-2rem 1rem 0 0;
       padding: 1rem;
       cursor: pointer;
       background-color: transparent;
@@ -50,7 +50,8 @@
       justify-content: center;
       gap: 1rem;
       padding: 0;
-      margin: 2rem 0 -2rem;
+      margin:0;
+      border-bottom: 2px solid $red-hi;
 
       &__item {
         flex: 1 0 auto;
@@ -93,9 +94,10 @@
     justify-content: center;
 
     &__logo {
-      flex: 1 1 25%;
-      height: 5rem;
+      flex: 0 1 25%;
+      height: 7.5rem;
       padding: 0;
+      margin-bottom:0;
 
       img {
         height: 100%;
@@ -118,10 +120,14 @@
       justify-content: flex-end;
       gap: 1rem;
       margin-right: -1rem;
+      border-bottom: none;
 
       &__item {
         width: initial;
         flex: 0 1 auto;
+        &:hover {
+          background: none;
+        }
 
         a {
           width: initial;
