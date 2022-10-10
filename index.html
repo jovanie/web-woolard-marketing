@@ -48,6 +48,7 @@
       <div class="nav__logo">
         <img src="img/wm-logo.png" alt="Woolard Marketing Logo">
       </div>
+      <div class="nav__button"><i class="fa-solid fa-bars"></i></div>
       <ul class="nav__menu">
         <li class="nav__menu__item"><a href="#" class="active">Home</a></li>
         <li class="nav__menu__item"><a href="#">About</a></li>
@@ -55,6 +56,28 @@
         <li class="nav__menu__item"><a href="#">Work</a></li>
         <li class="nav__menu__item"><a href="#">Contact</a></li>
       </ul>
+      <script>
+        $(window).resize(function() {
+          if (window.matchMedia('(min-width:1024px)').matches) {
+            $(".nav__menu").show();
+          } else if (window.matchMedia('(min-width:768px)').matches) {
+            $(".nav__menu").show();
+          } else if (window.matchMedia('(min-width:50px)').matches) {
+            $(".nav__menu").hide();
+            $(".nav__menu").addClass(".nav__menu--active");
+            $(".nav__button").unbind("click");
+            $(".nav__button").click(function() {
+              $(".nav__menu").slideToggle();
+            });
+            $(document).on("click", function(event) {
+              var $trigger = $(".nav");
+              if ($trigger !== event.target && !$trigger.has(event.target).length) {
+                $(".nav__menu").slideUp();
+              }
+            });
+          }
+        }).resize();
+      </script>
     </div>
     <div class="landing">
       <div class="landing__hero">
