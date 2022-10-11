@@ -20,7 +20,7 @@ $(window).resize(function() {
       if (window.matchMedia('(max-width: 767px)').matches) {
         var $trigger = $(".nav");
         if ($trigger !== event.target && !$trigger.has(event.target).length) {
-          $(".nav__menu").stop(true,true).slideUp();
+          $(".nav__menu").stop(true,true).slideUp(); 
         }
       }
     });
