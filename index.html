@@ -20,12 +20,6 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io//apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io//favicon-16x16.png">
-  <link rel="manifest" href="img/favicon_io/site.webmanifest">
-
   <!-- Vendor files -->
   <!-- + Normalize -->
   <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" rel="stylesheet">
@@ -43,10 +37,21 @@
 
 <body>
   <div class="page-body" id="home">
-    <div class="nav__container nav__container--load"></div>
-    <script>
-      $('.nav__container--load').load('header.html .nav__container');
-    </script>
+    <div class="nav__container">
+      <div class="nav">
+        <div class="nav__logo">
+          <a href="index.html"><img src="img/wm-logo.png" alt="Woolard Marketing Logo"></a>
+        </div>
+        <div class="nav__button"><i class="fa-solid fa-bars"></i></div>
+        <ul class="nav__menu">
+          <li class="nav__menu__item"><a href="index.html" id="nav--home" class="">Home</a></li>
+          <li class="nav__menu__item"><a href="about.html" id="nav--about" class="">About</a></li>
+          <li class="nav__menu__item"><a href="#" id="nav--services" class="">Services</a></li>
+          <li class="nav__menu__item"><a href="#" id="nav--work" class="">Work</a></li>
+          <li class="nav__menu__item"><a href="#" id="nav--contact" class="">Contact</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="landing">
       <div class="landing__hero">
         <div class="img-fluid"><img src="img/darrelhoemann-champaign-photo.png" alt=""></div>
@@ -197,16 +202,55 @@
       </div>
     </section>
 
-    <div class="load--contact"></div>
-    <script>
-      $('.load--contact').load('header.html .contact');
-    </script>
-    <div class="load--footer"></div>
-    <script>
-      $('.load--footer').load('header.html .footer');
-    </script>
+    <section class="contact">
+      <div class="contact__container max-width block-padding">
+        <h3 class="contact__title">Ready? Let's Chat.</h3>
+        <form class="contact__form" role="form" method="post" action="contact-form.php">
+          <div class="contact__form__section">
+            <fieldset class="contact__form__section__field contact__form__section__field--name"><input class="contact__form__section__field__input" placeholder="Name" id="name" name="name" type="text" tabindex="1" required></fieldset>
+            <fieldset class="contact__form__section__field contact__form__section__field--email"><input class="contact__form__section__field__input" placeholder="Email Address" id="email" name="email" type="email" tabindex="2" required></fieldset>
+            <fieldset class="contact__form__section__field contact__form__section__field--phone"><input class="contact__form__section__field__input" placeholder="Phone Number" id="phone" name="phone" type="tel" tabindex="3" required></fieldset>
+            <fieldset class="contact__form__section__field contact__form__section__field--company"><input class="contact__form__section__field__input" placeholder="Company" id="company" name="company" type="text" tabindex="4" required></fieldset>
+            <div class="contact__form__section__field contact__form__section__field--text"><textarea class="contact__form__section__field__text" placeholder="Tell us about your project" id="message" name="message" tabindex="5" required></textarea>
+            </div>
+            <div class="contact__form__section__field contact__form__section__field--break">&nbsp;</div>
+            <fieldset class="contact__form__section__field contact__form__section__field--submit"><button class="contact__form__section__field__button" name="submit" type="submit" role="button" id="contact-submit" data-submit="...Sending"
+                tabindex="6">Submit</button></fieldset>
+            <div id="form-messages" class="h3 success" style="text-align:center;"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container max-width block-padding">
+        <div class="footer__entry" id="logo">
+          <div class="img-fluid img-fluid--height"><img src="img/wm-logo-square.png" alt=""></div>
+        </div>
+        <div class="footer__entry" id="brand"><strong>Think BIGGER. Create BETTER.</strong>
+        </div>
+        <div class="footer__entry" id="contact">
+          <strong>Woolard Marketing</strong>
+          <li>10 E Taylor</li>
+          <li>Champaign, IL</li>
+        </div>
+        <div class="footer__entry" id="bonnie">
+          <li><strong>Bonnie Woolard</strong></li>
+          <li><a href="#">(217) XXX-XXXX</a></li>
+          <li><a href="mailto:#">bonnie@woolardmarketing.com</a></li>
+        </div>
+        <div class="footer__entry" id="links">
+          <li><strong>Quick Links</strong></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Who We Are</a></li>
+          <li><a href="#">What We Do</a></li>
+          <li><a href="#">Our Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </div>
+      </div>
+    </footer>
   </div>
   <script type="text/javascript" src="js/nav.js"></script>
+  <script type="text/javascript" src="js/resize.js"></script>
   <script>
     $(document).ready(function() {
       $("a#nav--home").addClass("active");

@@ -1,32 +1,16 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
   if (window.matchMedia('(max-width: 767px)').matches) {
-    $(".nav__menu").hide().stop(true,true);
-    $(".nav__button").unbind("click");
-    $(".nav__button").click(function() {
-      $(".nav__menu").stop(true,true).slideToggle();
-    });
+    jQuery(".nav__menu").slideUp(function() {}).stop(true, true);
   }
-});
-
-$(window).resize(function() {
-  $(".nav__button").unbind("click");
-  $(".nav__button").click(function() {
-    $(".nav__menu").stop(true,true).slideToggle();
+  jQuery(".nav__button").on("click", function(event) {
+    jQuery(".nav__menu").stop(true, true).slideToggle();
   });
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    $(".nav__menu").hide().stop(true,true);
-    $(".nav__menu").addClass(".nav__menu--active");
-    $(document).on("click", function(event) {
-      if (window.matchMedia('(max-width: 767px)').matches) {
-        var $trigger = $(".nav");
-        if ($trigger !== event.target && !$trigger.has(event.target).length) {
-          $(".nav__menu").stop(true,true).slideUp(); 
-        }
+  jQuery(document).on("click", function(event) {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      var $trigger = jQuery(".nav");
+      if ($trigger !== event.target && !$trigger.has(event.target).length) {
+        jQuery(".nav__menu").stop(true, true).slideUp();
       }
-    });
-  } else if (window.matchMedia('max-width: 1023px)').matches) {
-    $(".nav__menu").show().stop(true,true);
-  } else {
-    $(".nav__menu").show().stop(true,true);
-  }
-}).resize();
+    }
+  });
+});
