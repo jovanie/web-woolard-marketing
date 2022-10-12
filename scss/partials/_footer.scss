@@ -30,6 +30,11 @@
     }
 
     &__entry {
+      strong {
+        font-size: 1.75rem;
+        letter-spacing: 1.15px;
+        font-family: Oswald-Light;
+      }
       flex: 1 1 auto;
       display: block;
 

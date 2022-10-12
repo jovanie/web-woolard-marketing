@@ -80,8 +80,10 @@ p.thin {
 
   p,
   strong {
+    font-family: LiberationSans-Regular;
+    letter-spacing: normal;
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 @media screen and (min-width:768px) {
@@ -117,7 +119,7 @@ p.thin {
 
   p,
   strong {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin-top: 1.25rem;
   }
 }

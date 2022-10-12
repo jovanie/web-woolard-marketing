@@ -53,8 +53,6 @@
   }
 
   .ideas {
-    background: $background-gray;
-
     &__container {}
 
     &__entry {
@@ -66,20 +64,6 @@
       &__media {
         flex: 1 0 5%;
         width: 100%;
-
-        .aspect-img {
-          position: relative;
-          width: 100%;
-          padding-top: calc(4 / 3 * 100%);
-          overflow: hidden;
-          /* 16:9 Aspect Ratio */
-          .img-fluid {
-            width: 100%;
-            position: absolute;
-            object-fit: cover;
-            top: 0;
-          }
-        }
       }
 
       &__text {
@@ -110,12 +94,12 @@
       display: block;
 
       &--left {
-        padding-right: 0rem;
+        padding-right: 0;
       }
 
       &--right {
-        padding-left: 0rem;
-        margin-top: 0rem;
+        padding-left: 0;
+        margin-top: 0;
       }
 
       &__entry {
@@ -126,20 +110,6 @@
 
         &__media {
           width: 100%;
-
-          .aspect-img {
-            position: relative;
-            width: 100%;
-            padding-top: calc(4 / 3 * 100%);
-            overflow: hidden;
-            /* 16:9 Aspect Ratio */
-            .img-fluid {
-              width: 100%;
-              position: absolute;
-              object-fit: cover;
-              top: 0;
-            }
-          }
         }
 
         &__text {
@@ -174,8 +144,8 @@
   }
 
   .ideas {
-    background: $background-gray;
-
+    $this: &;
+    /* reference to the .entry class */
     &__container {}
 
     &__entry {
@@ -186,25 +156,47 @@
 
       &__media {
         flex: 1 0 50%;
-
-        .aspect-img {
-          position: relative;
-          width: 100%;
-          padding-top: calc(4 / 3 * 100%);
-          overflow: hidden;
-          /* 16:9 Aspect Ratio */
-          .img-fluid {
-            width: 100%;
-            position: absolute;
-            object-fit: cover;
-            top: 0;
-          }
-        }
       }
 
       &__text {
         flex: 1 1 50%;
         text-align: center;
+
+        &--text-left {
+          text-align: left;
+
+          #{$this}__entry {
+            &__text {
+              text-align: left;
+            }
+          }
+        }
+      }
+
+      &--one-third {
+        #{$this}__entry {
+          &__media {
+            flex: 1 1 33.33%;
+          }
+        }
+      }
+
+      &--one-fourth {
+        #{$this}__entry {
+          &__media {
+            flex: 1 1 25%;
+          }
+        }
+      }
+
+      &--reverse {
+        #{$this}__entry__media {
+          order: 2;
+        }
+
+        #{$this}__entry__text {
+          order: 1;
+        }
       }
     }
   }
@@ -246,20 +238,6 @@
 
         &__media {
           width: 100%;
-
-          .aspect-img {
-            position: relative;
-            width: 100%;
-            padding-top: calc(4 / 3 * 100%);
-            overflow: hidden;
-            /* 16:9 Aspect Ratio */
-            .img-fluid {
-              width: 100%;
-              position: absolute;
-              object-fit: cover;
-              top: 0;
-            }
-          }
         }
 
         &__text {

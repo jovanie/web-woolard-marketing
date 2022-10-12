@@ -11,7 +11,7 @@
   text-decoration: none;
   position: relative;
   display: table;
-  margin: 5rem auto 0 auto;
+  margin: 5rem auto 0;
   font-size: 2rem;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
@@ -24,14 +24,16 @@
     background: #202020;
     color: white;
   }
+
   &--white {
     background: white;
-    color:black;
+    color: black;
   }
 
   &--orange {
     background: $woolard-orange;
     color: white;
+
     &:hover {
       background: $orange-base;
     }
@@ -80,7 +82,7 @@
 }
 
 section {
-  padding: 5vh 0rem !important;
+  padding: 5vh 0 !important;
   margin: auto;
 }
 
@@ -102,15 +104,61 @@ section {
     height: 100%;
   }
 
-  &--width {
-    img {}
-  }
-
   &--height {
     img {
       height: 100%;
       width: auto;
       object-fit: contain;
+    }
+  }
+}
+
+.aspect-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* 16:9 Aspect Ratio */
+  .img-fluid {
+    padding-top: calc(4 / 3 * 100%);
+
+    img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+
+      &.top {
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+      }
+
+      &.center {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+      &.bottom {
+      position: absolute;
+      object-fit: cover;
+      top:auto;
+      bottom: 0 !important;
+      left:0;
+      transform: translate(0,0);
+      }
+    }
+  }
+
+  &--square {
+    .img-fluid {
+      padding-top: 100% !important;
+
+      img {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
     }
   }
 }
@@ -130,4 +178,8 @@ section {
 
 .text-right {
   text-align: right;
+}
+
+.background-gray {
+  background: $background-gray;
 }
