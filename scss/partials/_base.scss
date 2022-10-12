@@ -139,13 +139,14 @@ section {
         top: 50%;
         transform: translate(-50%,-50%);
       }
+
       &.bottom {
-      position: absolute;
-      object-fit: cover;
-      top:auto;
-      bottom: 0 !important;
-      left:0;
-      transform: translate(0,0);
+        position: absolute;
+        object-fit: cover;
+        top: auto;
+        bottom: 0 !important;
+        left: 0;
+        transform: translate(0,0);
       }
     }
   }
@@ -182,4 +183,10 @@ section {
 
 .background-gray {
   background: $background-gray;
+}
+
+.text-disabled {
+  color: #C6C6C6;
+  cursor: default;
+  opacity: 33%;
 }
