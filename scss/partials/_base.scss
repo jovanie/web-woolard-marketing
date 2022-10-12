@@ -120,10 +120,13 @@ section {
   /* 16:9 Aspect Ratio */
   .img-fluid {
     padding-top: calc(4 / 3 * 100%);
+    &--3-2 {
+      padding-top: calc(3 / 2 *100%);
+    }
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
       position: absolute;
       object-fit: cover;
       top: 0;
@@ -147,6 +150,7 @@ section {
         bottom: 0 !important;
         left: 0;
         transform: translate(0,0);
+        height: auto;
       }
     }
   }
@@ -159,6 +163,8 @@ section {
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
+        height: 100%;
+        width:100%;
       }
     }
   }
@@ -191,6 +197,12 @@ section {
   opacity: 33%;
 }
 @media screen and (min-width:480px) {
+  section {
+    padding: 0 0 !important;
+    margin: auto;
+  }
+}
+@media screen and (min-width:768px) {
   section {
     padding: 5vh 0 !important;
     margin: auto;
