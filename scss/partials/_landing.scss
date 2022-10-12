@@ -1,6 +1,39 @@
 //main:../wm-styles.scss
 // _landing.scss
 @media screen and (min-width:50px) {
+  .hero {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 250;
+
+    &--large {
+      height: 60vh;
+    }
+
+    &--medium {
+      height: 40vh;
+    }
+
+    &--small {
+      height: 25vh;
+    }
+
+    .img-fluid {
+      img {}
+    }
+
+    &__headline {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-size: 2.25em;
+    }
+  }
+
   .landing {
     &__hero {
       width: 100%;
@@ -121,6 +154,26 @@
   }
 }
 @media screen and (min-width:768px) {
+  .hero {
+    &--large {
+      height: 60vh;
+    }
+
+    &--medium {
+      height: 40vh;
+    }
+
+    &--small {
+      height: 25vh;
+    }
+
+    .img-fluid {
+      img {}
+    }
+
+    &__headline {}
+  }
+
   &__hero {
     .img-fluid {
       img {

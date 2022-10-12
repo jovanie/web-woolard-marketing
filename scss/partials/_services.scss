@@ -28,22 +28,183 @@
 
         &__icon {
           i {
-            color:$red-text;
+            color: $red-text;
             font-size: 3rem;
             padding: 1.5rem;
+
             &:hover {
-              color:$orange-base;
+              color: $orange-base;
             }
           }
         }
 
-        &__text {font-size: 1.75rem;
+        &__text {
+          font-size: 1.75rem;
         }
       }
     }
 
     & .button {
       &__container {}
+    }
+  }
+
+  .services--page {
+    .services {
+      &__headline {
+        text-align: left;
+        margin-top: 2rem;
+
+        h3 {}
+      }
+
+      &__subtitle {
+        margin-top: 2rem;
+        text-align: left;
+      }
+
+      &__table {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        width: 100%;
+
+        &__entry {
+          flex: 1 1 25%;
+          text-align: left;
+          margin-bottom: 2rem;
+          display: flex;
+          flex-direction: row;
+
+          &__icon {
+            width: 7rem;
+            flex: 0 1 auto;
+
+            i {
+              color: $red-text;
+              font-size: 3.5rem;
+              padding-top: 2rem;
+
+              &:hover {
+                color: $orange-base;
+              }
+            }
+          }
+
+          &__text {
+            flex: 1 1 50%;
+            font-size: 1.75rem;
+
+            h4 {
+              text-align: left;
+            }
+
+            &__list {
+              margin-top: 0.5rem;
+
+              ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+
+                li {}
+              }
+            }
+          }
+
+          &__body,
+          &__list {
+            ul {
+              list-style-type: none;
+              text-align: left;
+
+              li {}
+            }
+          }
+        }
+      }
+
+      & .button {
+        &__container {}
+      }
+    }
+  }
+}
+@media screen and (min-width:480px) {
+  .services {
+    &__headline {
+      text-align: center;
+
+      h3 {}
+    }
+
+    &__subtitle {
+      text-align: center;
+    }
+
+    &__table {
+      &__entry {
+        text-align: center;
+        flex: 1 1 25%;
+
+        &__icon {
+          i {}
+        }
+
+        &__text {}
+      }
+    }
+
+    & .button {
+      &__container {}
+    }
+  }
+
+  .services--page {
+    .services {
+      &__headline {
+        h3 {}
+      }
+
+      &__subtitle {}
+
+      &__table {
+        flex-direction: row;
+        &__entry {
+          flex: 1 1 50%;
+
+          &__icon {
+            i {
+              &:hover {}
+            }
+          }
+
+          &__text {
+            h4 {
+              text-align: left;
+            }
+
+            &__list {
+              ul {
+                li {}
+              }
+            }
+          }
+
+          &__body,
+          &__list {
+            ul {
+              li {}
+            }
+          }
+        }
+      }
+
+      & .button {
+        &__container {}
+      }
     }
   }
 }
@@ -74,6 +235,76 @@
 
     & .button {
       &__container {}
+    }
+  }
+
+  .services--page {
+    .services {
+      &__headline {
+        h3 {}
+      }
+
+      &__subtitle {}
+
+      &__table {
+        &__entry {
+          flex: 1 1 25%;
+          flex-direction: row;
+          gap: 1rem;
+
+          &__icon {
+            width: 3rem;
+            text-align: center;
+            margin: 0 auto;
+
+            i {
+              color: $red-text;
+              font-size: 2.5rem;
+              padding: 2rem 0 0;
+              margin: 0 auto;
+
+              &:hover {
+                color: $orange-base;
+              }
+            }
+          }
+
+          &__text {
+            font-size: 1.75rem;
+
+            h4 {
+              text-align: left;
+            }
+
+            &__list {
+              margin-top: 0.5rem;
+
+              ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+
+                li {}
+              }
+            }
+          }
+
+          &__body,
+          &__list {
+            ul {
+              list-style-type: none;
+              text-align: left;
+
+              li {}
+            }
+          }
+        }
+      }
+
+      & .button {
+        &__container {}
+      }
     }
   }
 }
