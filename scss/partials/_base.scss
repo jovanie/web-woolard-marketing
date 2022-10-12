@@ -82,7 +82,7 @@
 }
 
 section {
-  padding: 5vh 0 !important;
+  padding: 0 0 !important;
   margin: auto;
 }
 
@@ -189,4 +189,10 @@ section {
   color: #C6C6C6;
   cursor: default;
   opacity: 33%;
+}
+@media screen and (min-width:480px) {
+  section {
+    padding: 5vh 0 !important;
+    margin: auto;
+  }
 }

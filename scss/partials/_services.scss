@@ -78,12 +78,14 @@
           flex-direction: row;
 
           &__icon {
-            width: 7rem;
-            flex: 0 1 auto;
+            flex: 1 1 5rem;
+            text-align: left;
+            padding-right:2rem;
 
             i {
               color: $red-text;
               font-size: 3.5rem;
+              padding:0;
               padding-top: 2rem;
 
               &:hover {
@@ -93,7 +95,7 @@
           }
 
           &__text {
-            flex: 1 1 50%;
+            flex: 1 0 80%;
             font-size: 1.75rem;
 
             h4 {
@@ -255,13 +257,13 @@
           &__icon {
             width: 3rem;
             text-align: center;
+            padding:0;
             margin: 0 auto;
 
             i {
               color: $red-text;
               font-size: 2.5rem;
               padding: 2rem 0 0;
-              margin: 0 auto;
 
               &:hover {
                 color: $orange-base;
